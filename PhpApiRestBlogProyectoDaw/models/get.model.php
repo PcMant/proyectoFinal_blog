@@ -12,6 +12,10 @@ class GetModel{
 
         $sql = "SELECT $select FROM $table";
 
+        if($orderBy != null && $orderMode != null){
+            $sql = "SELECT $select FROM $table ORDER BY $orderBy $orderMode";
+        }
+
         $stmt = Connection::connect()->prepare($sql);
 
         $stmt->execute();
@@ -41,6 +45,10 @@ class GetModel{
         }
 
         $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+
+        if($orderBy != null && $orderMode != null){
+            $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
+        }
 
         $stmt = Connection::connect()->prepare($sql);
 
