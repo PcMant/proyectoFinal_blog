@@ -82,3 +82,44 @@ Stack trace:
 [25-Apr-2022 10:00:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.model.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
 [25-Apr-2022 10:00:13 UTC] PHP Warning:  require_once(controllers/get.model.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
 [25-Apr-2022 10:00:13 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.model.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
+[25-Apr-2022 10:48:09 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 31
+[25-Apr-2022 10:48:09 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 31
+[25-Apr-2022 10:48:09 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 31
+[25-Apr-2022 10:52:11 UTC] PHP Notice:  Undefined variable: response in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 25
+[25-Apr-2022 10:52:11 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 25
+[25-Apr-2022 10:59:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:7
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 7
+[25-Apr-2022 11:01:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:7
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 7
+[25-Apr-2022 11:01:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:7
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 7
+[25-Apr-2022 11:01:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:7
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 7
+[25-Apr-2022 11:03:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:7
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 7
+[25-Apr-2022 11:41:14 UTC] PHP Notice:  Array to string conversion in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 9

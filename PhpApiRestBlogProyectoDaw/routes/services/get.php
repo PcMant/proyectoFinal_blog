@@ -2,16 +2,9 @@
 
 require_once 'controllers/get.controller.php';
 
-$table = $routesArray[3];
+$table = explode('?',$routesArray[3])[0];
 
-$response = GetController::getData($table);
-echo '<pre>'; print_r($response); '</pre>';
+$select = $_GET['select'] ?? '*';
 
-return;
-
-$json = array(
-    'status' => 200,
-    'result' => 'Solicitud GET'
-);
-
-echo json_encode($json, http_response_code($json['status']));
+$response = new GetController();
+$response->getData($table, $select);
