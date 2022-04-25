@@ -6,7 +6,21 @@ $table = explode('?',$routesArray[3])[0];
 
 $select = $_GET['select'] ?? '*';
 
-if(isset($_GET['linkTo']) && isset($_GET['equalTo']))
-
 $response = new GetController();
-$response->getData($table, $select);
+
+/*=====================================
+Peticiones GET con filtro
+=====================================*/
+
+if(isset($_GET['linkTo']) && isset($_GET['equalTo'])){
+
+    $response->getDataFilter($table, $select, $_GET['linkTo'], $_GET['equalTo']);
+
+}else{
+
+    /*=====================================
+    Peticiones GET sin filtro
+    =====================================*/
+
+    $response->getData($table, $select);   
+}
