@@ -11,6 +11,8 @@ ini_set('error_log', './php_error_log'); /* La ruta del fichero de log de erores
 /*==============================================
 Requerimientos
 ===============================================*/
+require_once "models/connection.php";
+
 require_once "controllers/routes.controller.php";
 
 $index = new RoutesController;

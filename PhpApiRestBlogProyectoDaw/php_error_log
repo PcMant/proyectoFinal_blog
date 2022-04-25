@@ -1,0 +1,84 @@
+[25-Apr-2022 07:53:31 UTC] PHP Notice:  Array to string conversion in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 4
+[25-Apr-2022 07:53:42 UTC] PHP Notice:  Array to string conversion in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 4
+[25-Apr-2022 08:00:55 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 10
+[25-Apr-2022 08:02:35 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 14
+[25-Apr-2022 08:03:09 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 14
+[25-Apr-2022 08:03:10 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 14
+[25-Apr-2022 08:22:29 UTC] PHP Parse error:  syntax error, unexpected '$_SERVER' (T_VARIABLE), expecting '(' in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 26
+[25-Apr-2022 08:22:56 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
+[25-Apr-2022 08:22:59 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
+[25-Apr-2022 09:05:58 UTC] PHP Notice:  Undefined variable: infoDB in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 20
+[25-Apr-2022 09:27:32 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:27:32 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:40:17 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:40:17 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:40:17 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:40:43 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:40:43 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:40:43 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:46:06 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:06 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:06 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:46:07 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:07 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:07 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:46:08 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:08 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:46:08 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:47:33 UTC] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php:5
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include()
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#3 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 5
+[25-Apr-2022 09:51:31 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:51:31 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:01 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:01 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:02 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:03 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:53:03 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:55:49 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:55:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:33 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:33 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:34 UTC] PHP Warning:  require_once(controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:34 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:47 UTC] PHP Warning:  require_once(../../controllers/get.controller.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 09:56:47 UTC] PHP Fatal error:  require_once(): Failed opening required '../../controllers/get.controller.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
+[25-Apr-2022 10:00:11 UTC] PHP Warning:  require_once(controllers/get.model.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
+[25-Apr-2022 10:00:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.model.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
+[25-Apr-2022 10:00:13 UTC] PHP Warning:  require_once(controllers/get.model.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3
+[25-Apr-2022 10:00:13 UTC] PHP Fatal error:  require_once(): Failed opening required 'controllers/get.model.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 3

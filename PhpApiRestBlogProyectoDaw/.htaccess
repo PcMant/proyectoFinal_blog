@@ -1,0 +1,12 @@
+#habilitando la indexación para limitar el acceso a index muy importante
+#para proteger la aplicación
+Options All -Indexes
+
+#Permitir trabajar con las URLs amigables
+Options -MultiViews
+#Siempre y cuando tenga el engine(motor) de escritura encendido
+RewriteEngine On
+
+#Redirección para que todas las rutas redirigan a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
