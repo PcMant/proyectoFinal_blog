@@ -32,9 +32,21 @@ class GetController{
     Peticiones GET sin filtro entre tablas relacionadas
     =====================================*/
 
-    static public function geReltData($rel, $type, $select, $orderBy,$orderMode,$startAt,$endAt){
+    static public function getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt,$endAt){
 
-        $response = GetModel::getRelData($rel, $type, $table, $select, $orderBy,$orderMode,$startAt,$endAt);
+        $response = GetModel::getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt,$endAt);
+
+        $return = new GetController();
+        $return->fncResponse($response);
+    }
+
+    /*=====================================
+    Peticiones GET con filtro entre tablas relacionadas
+    =====================================*/
+
+    static public function getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt,$endAt){
+
+        $response = GetModel::getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt,$endAt);
 
         $return = new GetController();
         $return->fncResponse($response);
