@@ -8,7 +8,7 @@ class GetModel{
     Peticiones GET sin filtro
      ============================*/
 
-    static public function getData($table, $select){
+    static public function getData($table, $select, $orderBy, $orderMode){
 
         $sql = "SELECT $select FROM $table";
 
@@ -27,7 +27,7 @@ class GetModel{
     Peticiones GET con filtro
      ============================*/
 
-     static public function getDataFilter($table, $select, $linkTo, $equalTo){
+     static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode){
 
         $linkToArray = explode(",",$linkTo);
         $equalToArray = explode('_',$equalTo);

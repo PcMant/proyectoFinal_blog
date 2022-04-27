@@ -136,3 +136,9 @@ Stack trace:
 [25-Apr-2022 16:38:37 UTC] PHP Notice:  Undefined index: status in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 49
 [25-Apr-2022 16:53:47 UTC] PHP Notice:  Array to string conversion in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 55
 [25-Apr-2022 16:54:16 UTC] PHP Notice:  Array to string conversion in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 55
+[26-Apr-2022 23:15:36 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
+[26-Apr-2022 23:15:55 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
+[26-Apr-2022 23:15:56 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
+[26-Apr-2022 23:16:30 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
+[26-Apr-2022 23:17:07 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
+[26-Apr-2022 23:17:35 UTC] PHP Notice:  Undefined variable: orderBy in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 15
