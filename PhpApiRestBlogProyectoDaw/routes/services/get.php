@@ -25,6 +25,14 @@ if(isset($_GET['linkTo']) && isset($_GET['equalTo'])){
         $startAt,$endAt
     );
 
+/*=====================================
+Peticiones GET sin filtro entre tablas relacionadas
+=====================================*/
+
+}else if(isset($_GET['rel']) && isset($_GET['type']) && $table == 'relations' && !isset($_GET['linkTo']) && !isset($_GET['equalTo'])){
+
+    $response->getData($_GET['rel'],$_GET['type'], $select, $orderBy,$orderMode,$startAt,$endAt);
+
 }else{
 
     /*=====================================

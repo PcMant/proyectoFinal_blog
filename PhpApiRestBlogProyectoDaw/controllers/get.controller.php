@@ -28,6 +28,18 @@ class GetController{
         $return->fncResponse($response);
     }
 
+    /*=====================================
+    Peticiones GET sin filtro entre tablas relacionadas
+    =====================================*/
+
+    static public function geReltData($rel, $type, $select, $orderBy,$orderMode,$startAt,$endAt){
+
+        $response = GetModel::getRelData($rel, $type, $table, $select, $orderBy,$orderMode,$startAt,$endAt);
+
+        $return = new GetController();
+        $return->fncResponse($response);
+    }
+
     /*==================================================
     Respuestas del controlador
     ==================================================*/
