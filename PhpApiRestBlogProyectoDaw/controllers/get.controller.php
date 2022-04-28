@@ -52,6 +52,18 @@ class GetController{
         $return->fncResponse($response);
     }
 
+    /*=====================================
+    Peticiones GET para el buscador sin relaciones
+    =====================================*/
+    
+    static public function getDataSearch($table, $select, $linkTo, $search, $orderBy,$orderMode,$startAt,$endAt){
+
+        $response = GetModel::getDataSearch($table, $select, $linkTo, $search, $orderBy,$orderMode,$startAt,$endAt);
+
+        $return = new GetController();
+        $return->fncResponse($response);
+    }
+
     /*==================================================
     Respuestas del controlador
     ==================================================*/

@@ -41,6 +41,18 @@ Peticiones GET con filtro entre tablas relacionadas
 
     $response -> getRelDataFilter($_GET['rel'],$_GET['type'], $select, $_GET['linkTo'], $_GET['equalTo'],$orderBy,$orderMode,$startAt,$endAt);
 
+/*=====================================
+Peticiones GET para el fintro entre tablas relacionadas
+=====================================*/  
+}else if(isset($_GET['linkTo']) && isset($_GET['search'])){
+
+    $response -> getDataSearch(
+        $table, $select, 
+        $_GET['linkTo'], $_GET['search'],
+        $orderBy,$orderMode,
+        $startAt,$endAt
+    );
+
 }else{
 
     /*=====================================

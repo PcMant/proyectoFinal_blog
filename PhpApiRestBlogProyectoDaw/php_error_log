@@ -745,3 +745,11 @@ Stack trace:
 #4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #5 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 235
+[28-Apr-2022 16:09:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method GetModel::getDataSearh() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php:61
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php(50): GetController::getDataSearch('articulos', 'titulo,usuario', 'usuario', 'juan', NULL, NULL, NULL, NULL)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 61
