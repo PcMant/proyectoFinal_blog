@@ -753,3 +753,4 @@ Stack trace:
 #3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #4 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 61
+[28-Apr-2022 16:30:04 UTC] PHP Notice:  Undefined variable: equalTo in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 254
