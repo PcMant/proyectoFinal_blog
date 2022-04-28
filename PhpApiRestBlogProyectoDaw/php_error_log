@@ -754,3 +754,5 @@ Stack trace:
 #4 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 61
 [28-Apr-2022 16:30:04 UTC] PHP Notice:  Undefined variable: equalTo in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 254
+[28-Apr-2022 19:18:40 UTC] PHP Fatal error:  A void function must not return a value in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 305
+[28-Apr-2022 19:18:43 UTC] PHP Fatal error:  A void function must not return a value in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 305
