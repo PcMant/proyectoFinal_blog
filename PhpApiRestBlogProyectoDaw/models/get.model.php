@@ -390,4 +390,50 @@ class GetModel{
         return $stmt->fetchAll(PDO::FETCH_CLASS);
 
     }
+
+    /*=====================================
+    Peticiones GET para selección de rangos
+    =====================================*/
+
+    static public function getDataRange($table, $select, $linkTo,$between1, $between2,$orderBy,$orderMode,$startAt,$endAt,$filterTo,$inTo){
+
+        $filter = '';
+
+        if($filterTo != null && $inTo != null){
+            $filter = 'AND '.$filterTo.' IN ('.$inTo.')';
+        }
+
+         /*=============================
+        Sin ordenar y sin limitar datos
+        ============================*/
+        $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$between1' AND '$between2'";
+
+        /*=============================
+        Ordenar datos sin limies
+        ============================*/
+        if($orderBy != null && $orderMode != null && $startAt == null && $endAt == null){
+            $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$between1' AND '$between2' $filter ORDER BY $orderBy $orderMode";
+        }
+
+        /*=============================
+        Ordenar y sin limitar datos
+        ============================*/
+        if($orderBy != null && $orderMode != null && $startAt != null && $endAt != null){
+            $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$between1' AND '$between2' $filter ORDER BY $orderBy $orderMode LIMIT $startAt,$endAt";
+        }
+
+        /*=============================
+        Limitar datos sin ordenar
+        ============================*/
+        if($orderBy != null && $orderMode == null && $startAt != null && $endAt != null){
+            $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$between1' AND '$between2' $filter LIMIT $startAt,$endAt";
+        }
+
+        $stmt = Connection::connect()->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        
+    }
 }

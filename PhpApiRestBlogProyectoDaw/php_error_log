@@ -756,3 +756,27 @@ Stack trace:
 [28-Apr-2022 16:30:04 UTC] PHP Notice:  Undefined variable: equalTo in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 254
 [28-Apr-2022 19:18:40 UTC] PHP Fatal error:  A void function must not return a value in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 305
 [28-Apr-2022 19:18:43 UTC] PHP Fatal error:  A void function must not return a value in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 305
+[29-Apr-2022 23:56:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getDataRange(), 9 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 85 and exactly 10 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php:398
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php(85): GetModel::getDataRange('usuarios', '*', '', '', '', NULL, NULL, NULL, NULL)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php(70): GetController::getDataRange('usuarios', '*', '', '', '', NULL, NULL, NULL, NULL, '', '')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->i in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 398
+[29-Apr-2022 23:57:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getDataRange(), 9 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 85 and exactly 10 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php:398
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php(85): GetModel::getDataRange('usuarios', '*', 'fecha', '1990-1-1', '2023-1-1', NULL, NULL, NULL, NULL)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php(70): GetController::getDataRange('usuarios', '*', 'fecha', '1990-1-1', '2023-1-1', NULL, NULL, NULL, NULL, 'categoria', 'test')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpAp in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 398
+[29-Apr-2022 23:57:56 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getDataRange(), 9 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php on line 85 and exactly 10 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php:398
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\get.controller.php(85): GetModel::getDataRange('articulos', '*', 'fecha', '1990-1-1', '2023-1-1', NULL, NULL, NULL, NULL)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php(70): GetController::getDataRange('articulos', '*', 'fecha', '1990-1-1', '2023-1-1', NULL, NULL, NULL, NULL, 'categoria', 'test')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(33): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\Php in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 398
+[30-Apr-2022 00:03:50 UTC] PHP Notice:  Undefined variable: linkTo in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 409
+[30-Apr-2022 00:04:56 UTC] PHP Warning:  Use of undefined constant inTo - assumed 'inTo' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 402
+[30-Apr-2022 00:04:58 UTC] PHP Warning:  Use of undefined constant inTo - assumed 'inTo' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 402

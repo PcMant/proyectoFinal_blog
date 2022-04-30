@@ -9,6 +9,8 @@ $orderBy = $_GET['orderBy'] ?? null;
 $orderMode = $_GET['orderMode'] ?? null;
 $startAt = $_GET['startAt'] ?? null;
 $endAt = $_GET['endAt'] ?? null;
+$filterTo = $_GET['filterTo'] ?? null;
+$inTo = $_GET['inTo'] ?? null;
 
 $response = new GetController();
 
@@ -59,6 +61,13 @@ Peticiones GET para el buscador entre tablas relacionadas
 }else if(isset($_GET['rel']) && isset($_GET['type']) && $table == 'relations' && isset($_GET['linkTo']) && isset($_GET['search'])){
 
     $response -> getRelDataSearch($_GET['rel'],$_GET['type'], $select, $_GET['linkTo'], $_GET['search'],$orderBy,$orderMode,$startAt,$endAt);
+
+/*=====================================
+Peticiones GET para selección de rangos
+=====================================*/
+}else if(isset($_GET['linkTo']) && isset($_GET['between1']) && isset($_GET['between2'])){
+
+    $response -> getDataRange($table,$select,$_GET['linkTo'],$_GET['between1'], $_GET['between2'],$orderBy,$orderMode,$startAt,$endAt,$filterTo,$inTo);
 
 }else{
 
