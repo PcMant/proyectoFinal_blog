@@ -831,3 +831,6 @@ Stack trace:
 #3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #4 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\put.controller.php on line 11
+[01-May-2022 23:02:41 UTC] PHP Notice:  Undefined variable: data in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\delete.php on line 31
+[01-May-2022 23:04:06 UTC] PHP Notice:  Undefined variable: data in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\delete.model.php on line 35
+[01-May-2022 23:04:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\delete.model.php on line 35

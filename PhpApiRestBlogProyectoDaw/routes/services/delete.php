@@ -28,6 +28,6 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
     Solicitamos respuesta del controlador para eliminar datos en cualquier tabla
     =================================*/
     $response = new DeleteController();
-    $response->deleteData($table,$data,$_GET['id'],$_GET['nameId']);
+    $response->deleteData($table,$_GET['id'],$_GET['nameId']);
 
 }

@@ -38,7 +38,7 @@ class DeleteController{
 
 				'status' => 404,
 				'results' => 'Not Found',
-				'method' => 'put'
+				'method' => 'delete'
 
 			);
 
