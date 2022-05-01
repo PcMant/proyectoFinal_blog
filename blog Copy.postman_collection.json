@@ -524,7 +524,7 @@
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=Juan&nameId=nick",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=test1&nameId=nick",
 					"host": [
 						"localhost"
 					],
@@ -536,7 +536,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "Juan"
+							"value": "test1"
 						},
 						{
 							"key": "nameId",
