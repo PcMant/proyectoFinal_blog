@@ -47,15 +47,23 @@ if(count($routesArray) > 2 && isset($_SERVER["REQUEST_METHOD"])){
         return;
     }
 
+
+    /*=================================
+    Peticiones PUT
+    =================================*/
+    
+    if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+        include 'services/put.php';
+    
+        return;
+    }
      
+    /*=================================
+    Peticiones DELETE
+    =================================*/
     
     if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
-        $json = array(
-            'status' => 200,
-            'result' => 'Solicitud DELETE'
-        );
-    
-        echo json_encode($json, http_response_code($json['status']));
+        include 'services/delete.php';
     
         return;
     }

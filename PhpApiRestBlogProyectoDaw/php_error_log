@@ -823,3 +823,11 @@ Stack trace:
 [01-May-2022 02:11:54 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
 [01-May-2022 02:12:57 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
 [01-May-2022 02:14:54 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 77
+[01-May-2022 19:49:56 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PutController::putData(), 3 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\put.php on line 53 and exactly 4 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\put.controller.php:11
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\put.php(53): PutController::putData('usuarios', Array, 'nick')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(56): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\put.controller.php on line 11
