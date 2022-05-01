@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "7dab1101-8ce4-4330-a35f-e729fc78e511",
+		"name": "blog Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar dato especifico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo",
+							"description": "Columnas a mostrar de no existir por defecto son todas"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - filtro de un solo valor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&equalTo=juan&linkTo=usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "equalTo",
+							"value": "juan"
+						},
+						{
+							"key": "linkTo",
+							"value": "usuario"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Seleccionar con filtro por varios valores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&linkTo=titulo,usuario&equalTo=test_juan",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "linkTo",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "equalTo",
+							"value": "test_juan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos por filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&linkTo=titulo,usuario&equalTo=test_juan&orderBy=titulo&orderMode=DESC",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "linkTo",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "equalTo",
+							"value": "test_juan"
+						},
+						{
+							"key": "orderBy",
+							"value": "titulo"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos sin filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=usuario,categoria&startAt=0&endAt=5",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "usuario,categoria"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos con filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=usuario,categoria&startAt=0&endAt=5&linkTo=usuario&equalTo=juan&orderMode=DESC&orderBy=categoria",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "usuario,categoria"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						},
+						{
+							"key": "linkTo",
+							"value": "usuario"
+						},
+						{
+							"key": "equalTo",
+							"value": "juan"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						},
+						{
+							"key": "orderBy",
+							"value": "categoria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articulos?select=nick&rel=articulos,usuarios&type=usuario,nick&linkTo=nick&equalTo=juan",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"relations",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "nick"
+						},
+						{
+							"key": "rel",
+							"value": "articulos,usuarios"
+						},
+						{
+							"key": "type",
+							"value": "usuario,nick"
+						},
+						{
+							"key": "linkTo",
+							"value": "nick"
+						},
+						{
+							"key": "equalTo",
+							"value": "juan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda sin filtros ni relaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&search=juan&linkTo=usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "search",
+							"value": "juan"
+						},
+						{
+							"key": "linkTo",
+							"value": "usuario"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda sin relaciones y con filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&search=juan&linkTo=usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo,usuario"
+						},
+						{
+							"key": "search",
+							"value": "juan"
+						},
+						{
+							"key": "linkTo",
+							"value": "usuario"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda con relaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articulos?type=usuario,nick&rel=articulos,usuarios&select=nick&linkTo=usuario,titulo&search=juan_test",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"relations",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "usuario,nick"
+						},
+						{
+							"key": "rel",
+							"value": "articulos,usuarios"
+						},
+						{
+							"key": "select",
+							"value": "nick"
+						},
+						{
+							"key": "linkTo",
+							"value": "usuario,titulo"
+						},
+						{
+							"key": "search",
+							"value": "juan_test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos con filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?select=nombre&between1=1990-1-1&between2=2023-1-1&linkTo=fecha&filterTo=tipo&inTo=test",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "nombre"
+						},
+						{
+							"key": "between1",
+							"value": "1990-1-1",
+							"description": "valor1 del rango"
+						},
+						{
+							"key": "between2",
+							"value": "2023-1-1",
+							"description": "valor2 del rango"
+						},
+						{
+							"key": "linkTo",
+							"value": "fecha",
+							"description": "Con la columna con la que se enlaza"
+						},
+						{
+							"key": "filterTo",
+							"value": "tipo"
+						},
+						{
+							"key": "inTo",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos entre relaciones con filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?select=tipo,fecha&between1=1990-1-1&between2=2023-1-1&linkTo=fecha&filterTo=tipo&inTo=test&rel=usuarios,usuario_tipos&type=tipo,tipo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "tipo,fecha"
+						},
+						{
+							"key": "between1",
+							"value": "1990-1-1",
+							"description": "valor1 del rango"
+						},
+						{
+							"key": "between2",
+							"value": "2023-1-1",
+							"description": "valor2 del rango"
+						},
+						{
+							"key": "linkTo",
+							"value": "fecha",
+							"description": "Con la columna con la que se enlaza"
+						},
+						{
+							"key": "filterTo",
+							"value": "tipo"
+						},
+						{
+							"key": "inTo",
+							"value": "test"
+						},
+						{
+							"key": "rel",
+							"value": "usuarios,usuario_tipos"
+						},
+						{
+							"key": "type",
+							"value": "tipo,tipo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Crear registros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "categoria",
+							"value": "test25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/categorias",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Actualizar registros",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "apellidos",
+							"value": "Molina Gómez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=Juan&nameId=nick",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "Juan"
+						},
+						{
+							"key": "nameId",
+							"value": "nick"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Eliminar registro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=Juan&nameId=nick",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "Juan"
+						},
+						{
+							"key": "nameId",
+							"value": "nick"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
