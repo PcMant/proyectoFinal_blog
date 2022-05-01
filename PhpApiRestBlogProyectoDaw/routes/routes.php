@@ -25,6 +25,8 @@ Cuando si se tiene una petición a la API
 
 if(count($routesArray) > 2 && isset($_SERVER["REQUEST_METHOD"])){
 
+    $table = explode('?',$routesArray[3])[0];
+
     /*=================================
     Peticiones GET
     =================================*/
@@ -36,23 +38,16 @@ if(count($routesArray) > 2 && isset($_SERVER["REQUEST_METHOD"])){
     }
 
     /*=================================
-    Peticiones GET
+    Peticiones POST
     =================================*/
     
-    if($_SERVER['REQUEST_METHOD'] == 'PUT'){
-        $json = array(
-            'status' => 200,
-            'result' => 'Solicitud PUT'
-        );
-    
-        echo json_encode($json, http_response_code($json['status']));
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        include 'services/post.php';
     
         return;
     }
 
-    /*=================================
-    Peticiones GET
-    =================================*/
+     
     
     if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
         $json = array(

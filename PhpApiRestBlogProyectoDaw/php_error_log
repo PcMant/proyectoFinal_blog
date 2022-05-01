@@ -780,3 +780,46 @@ Stack trace:
 [30-Apr-2022 00:03:50 UTC] PHP Notice:  Undefined variable: linkTo in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 409
 [30-Apr-2022 00:04:56 UTC] PHP Warning:  Use of undefined constant inTo - assumed 'inTo' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 402
 [30-Apr-2022 00:04:58 UTC] PHP Warning:  Use of undefined constant inTo - assumed 'inTo' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 402
+[30-Apr-2022 15:28:39 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 28
+[30-Apr-2022 15:28:39 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 36
+[30-Apr-2022 15:28:39 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 52
+[30-Apr-2022 15:28:39 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 69
+[30-Apr-2022 15:28:39 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 79
+[30-Apr-2022 15:28:45 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 63
+[30-Apr-2022 16:32:12 UTC] PHP Fatal error:  Cannot declare class Connection, because the name is already in use in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\get.model.php on line 5
+[01-May-2022 01:25:31 UTC] PHP Warning:  require_once(models/connection/connection.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 3
+[01-May-2022 01:25:31 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/connection/connection.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 3
+[01-May-2022 01:26:57 UTC] PHP Warning:  require_once(../models/connection/connection.php): failed to open stream: No such file or directory in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 3
+[01-May-2022 01:26:57 UTC] PHP Fatal error:  require_once(): Failed opening required '../models/connection/connection.php' (include_path='.;C:\php\pear') in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 3
+[01-May-2022 01:27:36 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 18
+[01-May-2022 01:30:37 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:30:37 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:35:50 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:41:47 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:51:53 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:53:15 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 19
+[01-May-2022 01:54:24 UTC] PHP Notice:  Undefined variable: table in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 24
+[01-May-2022 02:05:12 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
+[01-May-2022 02:05:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::lastId() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php:35
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php(12): PostModel::postData('categorias', Array)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(41): PostController::postData('categorias', Array)
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#5 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 35
+[01-May-2022 02:07:19 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
+[01-May-2022 02:07:19 UTC] PHP Notice:  Undefined variable: restun in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 15
+[01-May-2022 02:07:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fncResponse() on null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php:15
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(41): PostController::postData('categorias', Array)
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 15
+[01-May-2022 02:08:11 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
+[01-May-2022 02:11:54 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
+[01-May-2022 02:12:57 UTC] PHP Notice:  Undefined variable: colums in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\post.model.php on line 23
+[01-May-2022 02:14:54 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 77
