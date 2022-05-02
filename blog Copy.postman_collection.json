@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7dab1101-8ce4-4330-a35f-e729fc78e511",
+		"_postman_id": "5022b42a-70d2-47b2-afa3-fb75e35d22c2",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -570,6 +570,65 @@
 						{
 							"key": "nameId",
 							"value": "nick"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick_usuario",
+							"value": "registro1",
+							"type": "text"
+						},
+						{
+							"key": "pass_usuario",
+							"value": "123",
+							"type": "default"
+						},
+						{
+							"key": "apellidos_usuario",
+							"value": "Molina",
+							"type": "default"
+						},
+						{
+							"key": "nombre_usuario",
+							"value": "Juan",
+							"type": "default"
+						},
+						{
+							"key": "tipo_usuario",
+							"value": "admin",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?register=true&suffix=usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "usuario"
 						}
 					]
 				}

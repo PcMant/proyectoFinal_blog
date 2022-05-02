@@ -17,6 +17,29 @@ class PostController{
     }
 
     /*==================================================
+    Paticion POST para registrar usuarios
+    ==================================================*/
+    static public function postRegister($table, $data, $suffix){
+
+        if(isset($data['password_'.$suffix]) && !empty($data['password_'.$suffix])){
+
+            /*=========================================
+            Encriptamos la contraseña
+            =========================================*/
+            $crypt = crypt($data['password_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
+
+            $data['password_'.$suffix] = $crypt;
+
+            $response = PostModel::postData($table, $data);
+            $return->fncResponse($response);
+        }else{
+            //
+        }
+
+    }
+
+
+    /*==================================================
     Respuestas del controlador
     ==================================================*/
 

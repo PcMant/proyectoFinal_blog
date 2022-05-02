@@ -34,9 +34,22 @@ if(isset($_POST)){
 
 	}
 
-    /*=================================
-    Solicitamos respuesta del controlador para crear datos en cualquier tabla
+	$response = new PostController();
+
+	/*=================================
+    Peticion post para el registro de usuario
     =================================*/
-    $response = new PostController();
-    $response->postData($table,$_POST);
+	if(isset($_GET['register']) && $_GET['register'] == 'true'){
+
+		$suffix = $_GET['suffix'] ?? 'usuarios';
+
+		$response->postRegister($table,$_POST,$suffix);
+
+	}else{
+
+		/*=================================
+    	Solicitamos respuesta del controlador para crear datos en cualquier tabla
+    	=================================*/
+    	$response->postData($table,$_POST);
+	}
 }
