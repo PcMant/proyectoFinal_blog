@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5022b42a-70d2-47b2-afa3-fb75e35d22c2",
+		"_postman_id": "b4dd709b-c3df-4a0b-ae0c-328aa57b082d",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -586,12 +586,12 @@
 					"urlencoded": [
 						{
 							"key": "nick_usuario",
-							"value": "registro1",
+							"value": "registro23",
 							"type": "text"
 						},
 						{
-							"key": "pass_usuario",
-							"value": "123",
+							"key": "nombre_usuario",
+							"value": "Juan",
 							"type": "default"
 						},
 						{
@@ -600,13 +600,13 @@
 							"type": "default"
 						},
 						{
-							"key": "nombre_usuario",
-							"value": "Juan",
+							"key": "tipo_usuario",
+							"value": "admin",
 							"type": "default"
 						},
 						{
-							"key": "tipo_usuario",
-							"value": "admin",
+							"key": "pass_usuario",
+							"value": "123",
 							"type": "default"
 						}
 					]

@@ -36,14 +36,15 @@ if(isset($_POST)){
 
 	$response = new PostController();
 
-	/*=================================
-    Peticion post para el registro de usuario
-    =================================*/
-	if(isset($_GET['register']) && $_GET['register'] == 'true'){
+	/*=============================================
+	Peticion POST para registrar usuario
+	=============================================*/
 
-		$suffix = $_GET['suffix'] ?? 'usuarios';
+	if(isset($_GET["register"]) && $_GET["register"] == true){
 
-		$response->postRegister($table,$_POST,$suffix);
+		$suffix = $_GET["suffix"] ?? "usuario";
+
+		$response -> postRegister($table,$_POST,$suffix);
 
 	}else{
 
