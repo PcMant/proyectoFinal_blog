@@ -78,7 +78,7 @@ class PostController{
                 $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
 
                 if($update['comment'] == 'The process was successful'){
-                    // Validación de guardado de token
+                    // Validación de guardado de token.
                 }
 
             }else{
