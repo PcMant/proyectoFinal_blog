@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b4dd709b-c3df-4a0b-ae0c-328aa57b082d",
+		"_postman_id": "d6e505e0-2a4e-4477-9c44-e302fd88f0da",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -586,7 +586,7 @@
 					"urlencoded": [
 						{
 							"key": "nick_usuario",
-							"value": "registro23",
+							"value": "registro",
 							"type": "text"
 						},
 						{
@@ -606,7 +606,7 @@
 						},
 						{
 							"key": "pass_usuario",
-							"value": "123",
+							"value": "1234",
 							"type": "default"
 						}
 					]
@@ -624,6 +624,65 @@
 					"query": [
 						{
 							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "usuario"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nick_usuario",
+							"value": "registro",
+							"type": "text"
+						},
+						{
+							"key": "nombre_usuario",
+							"value": "Juan",
+							"type": "default"
+						},
+						{
+							"key": "apellidos_usuario",
+							"value": "Molina",
+							"type": "default"
+						},
+						{
+							"key": "tipo_usuario",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "pass_usuario",
+							"value": "1234",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?login=true&suffix=usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"proyectoFinal_blog",
+						"PhpApiRestBlogProyectoDaw",
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "login",
 							"value": "true"
 						},
 						{
