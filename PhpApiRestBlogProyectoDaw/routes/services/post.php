@@ -46,6 +46,16 @@ if(isset($_POST)){
 
 		$response -> postRegister($table,$_POST,$suffix);
 
+	/*=============================================
+	Peticion POST para login de usuario
+	=============================================*/
+
+	}else if(isset($_GET["login"]) && $_GET["login"] == true){
+
+		$suffix = $_GET["suffix"] ?? "usuario";
+
+		$response -> postLogin($table,$_POST,$suffix);
+
 	}else{
 
 		/*=================================

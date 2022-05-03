@@ -844,3 +844,6 @@ Stack trace:
 #3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #4 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 34
+[03-May-2022 08:45:26 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 08:46:00 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 08:48:34 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61

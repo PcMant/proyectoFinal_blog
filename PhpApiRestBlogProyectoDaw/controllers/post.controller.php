@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/post.model.php';
+require_once 'models/get.model.php';
 
 class PostController{
 
@@ -12,7 +13,7 @@ class PostController{
         $response = PostModel::postData($table,$data);
 
         $return = new PostController();
-        $return->fncResponse($response);
+        $return->fncResponse($response,null);
 
     }
 
@@ -33,19 +34,48 @@ class PostController{
             $response = PostModel::postData($table, $data);
 
             $return = new PostController();
-            $return->fncResponse($response);
-        }else{
-            //
+            $return->fncResponse($response,null);
         }
-
     }
 
+    /*==================================================
+    Paticion POST para login de usuario
+    ==================================================*/
+    static public function postLogin($table, $data, $suffix){
+
+        /*=================================================
+        Validar que el usuario exista en BD
+        ==================================================*/
+        $response = GetModel::getDataFilter($table, "*", "nick_".$suffix, $data["nick_".$suffix], null,null,null,null);
+
+        if(!empty($response)){
+            
+            /*=========================================
+            Encriptamos la contraseña
+            =========================================*/
+            $crypt = crypt($data['pass_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
+
+            if($response[0]->{'pass_'.$suffix} == $crypt){
+
+            }else{
+
+                $response = null;
+                $return = new PostController();
+                $return->fncResponse($response, "Wrong password");
+
+            }
+        }else{
+            $response = null;
+            $return = new PostController();
+            $return->fncResponse($response, "Wrong nick");
+        }
+    }
 
     /*==================================================
     Respuestas del controlador
     ==================================================*/
 
-    public function fncResponse($response){
+    public function fncResponse($response,$error){
 
         if(!empty($response)){
 
@@ -57,10 +87,20 @@ class PostController{
 
         }else{
 
-            $json = array(
-                'status' => 404,
-                'result' => 'Not Found'
-            );
+            if($error != null){
+
+                $json = array(
+                    'status' => 404,
+                    'result' => $error
+                );
+
+            }else{
+
+                $json = array(
+                    'status' => 404,
+                    'result' => 'Not Found'
+                );
+            }
         }
 
         echo json_encode($json, http_response_code($json['status']));
