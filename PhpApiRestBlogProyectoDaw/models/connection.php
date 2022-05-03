@@ -1,5 +1,7 @@
 <?php
 
+require_once "vendor/autoload.php";
+use Firebase\JWT\JWT;
 class Connection
 {
     
@@ -92,5 +94,27 @@ class Connection
 
             return $sum == count($columns) ? $validate : null;
         }
+    }
+
+    /*=============================================
+    Generar token de Autenticación
+    =============================================*/
+
+    static public function jwt($id,$email){
+        
+        $time = time();
+
+        $token = array(
+
+            "iat" => $time,// Tiempo en en que inicia el token
+            "exp" => $time + (60*60*24), // Tiempo en que expirará el token (duración 1d),
+            "data" => [
+                "id" => $id,
+                "email" => $email
+            ]
+        );
+
+        return token;
+
     }
 }

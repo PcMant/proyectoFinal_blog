@@ -847,3 +847,53 @@ Stack trace:
 [03-May-2022 08:45:26 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
 [03-May-2022 08:46:00 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
 [03-May-2022 08:48:34 UTC] PHP Notice:  Undefined property: stdClass::$password_usuario in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:15:02 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:15:02 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php:61
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:18:39 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:18:39 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php:61
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:18:40 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php:61
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:18:42 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php:61
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#4 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 61
+[03-May-2022 22:37:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 117 and at least 3 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php:184
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php(117): Firebase\JWT\JWT::encode(Array, 'fsdfasfsdfssf')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php(61): Connection::jwt('registro', 'registro')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#5 C:\wamp64\ww in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
+[03-May-2022 22:39:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 117 and at least 3 expected in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php:184
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php(117): Firebase\JWT\JWT::encode(Array, 'fsdfasfsdfzcc<c...')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php(61): Connection::jwt('registro', 'registro')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#5 C:\wamp in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
