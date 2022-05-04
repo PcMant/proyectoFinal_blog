@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6790feef-de43-408e-9c4a-1d4d8f9695e1",
+		"_postman_id": "634fd61b-a610-444c-b42a-9dd8a2ab10b0",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -512,19 +512,19 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "nombre",
+							"key": "nombre_usuario",
 							"value": "Juan",
 							"type": "text"
 						},
 						{
-							"key": "apellidos",
-							"value": "Molina Gómez",
+							"key": "apellidos_usuario",
+							"value": "Molina Gómez R",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=test1&nameId=nick",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=juan&nameId=nick_usuario",
 					"host": [
 						"localhost"
 					],
@@ -536,11 +536,11 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "test1"
+							"value": "juan"
 						},
 						{
 							"key": "nameId",
-							"value": "nick"
+							"value": "nick_usuario"
 						}
 					]
 				}
