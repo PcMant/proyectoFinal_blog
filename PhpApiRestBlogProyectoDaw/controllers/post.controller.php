@@ -18,7 +18,7 @@ class PostController{
         $response = PostModel::postData($table,$data);
 
         $return = new PostController();
-        $return->fncResponse($response,null);
+        $return->fncResponse($response,null,$suffix);
 
     }
 
@@ -39,7 +39,7 @@ class PostController{
             $response = PostModel::postData($table, $data);
 
             $return = new PostController();
-            $return->fncResponse($response,null);
+            $return->fncResponse($response,null,$suffix);
         }
     }
 
@@ -85,7 +85,7 @@ class PostController{
                     $response[0]->{'token_exp_'.$suffix} = $token['exp'];
 
                     $return = new PostController();
-                    $return->fncResponse($response,null);
+                    $return->fncResponse($response,null,$suffix);
 
                 }
 
@@ -93,13 +93,13 @@ class PostController{
 
                 $response = null;
                 $return = new PostController();
-                $return->fncResponse($response, "Wrong password");
+                $return->fncResponse($response, "Wrong password",$suffix);
 
             }
         }else{
             $response = null;
             $return = new PostController();
-            $return->fncResponse($response, "Wrong nick");
+            $return->fncResponse($response, "Wrong nick",$suffix);
         }
     }
 
@@ -107,16 +107,16 @@ class PostController{
     Respuestas del controlador
     ==================================================*/
 
-    public function fncResponse($response,$error){
+    public function fncResponse($response,$error,$suffix){
+
+        if(!empty($response)){
 
         /*==================================================
         Quitamos la contraseña de la respuesta
         ==================================================*/
-        if(isset($response)){
-
+        if(isset($response[0]->{'pass_'.$suffix})){
+            unset($response[0]->{'pass_'.$suffix});
         }
-
-        if(!empty($response)){
 
             $json = array(
                 'status'    =>  200,
