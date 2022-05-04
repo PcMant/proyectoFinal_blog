@@ -114,7 +114,7 @@ class Connection
             ]
         );
 
-        return token;
+        return $token;
 
     }
 }

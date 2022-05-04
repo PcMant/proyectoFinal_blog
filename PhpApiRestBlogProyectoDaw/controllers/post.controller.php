@@ -64,7 +64,7 @@ class PostController{
 
                 $token = Connection::jwt($response[0]->{'nick_'.$suffix},$response[0]->{'nick_'.$suffix});
 
-                $jwt = JWT::encode($token, 'fsdfasfsdfzcc<cszdssf', 'HS256');
+                $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
                 
                 /*=========================================
                 Actualizar la base de datos con el token
@@ -77,8 +77,16 @@ class PostController{
 
                 $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
 
-                if($update['comment'] == 'The process was successful'){
-                    // Validación de guardado de token.
+                //echo '<pre>'; print_r($update); echo '</pre>'; return;
+
+                if(isset($update['comment']) && $update['comment'] == 'The process was successful'){
+
+                    $response[0]->{'token_'.$suffix} = $jwt;
+                    $response[0]->{'token_exp_'.$suffix} = $token['exp'];
+
+                    $return = new PostController();
+                    $return->fncResponse($response,null);
+
                 }
 
             }else{
@@ -100,6 +108,13 @@ class PostController{
     ==================================================*/
 
     public function fncResponse($response,$error){
+
+        /*==================================================
+        Quitamos la contraseña de la respuesta
+        ==================================================*/
+        if(isset($response)){
+
+        }
 
         if(!empty($response)){
 

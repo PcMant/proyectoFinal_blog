@@ -906,3 +906,15 @@ Stack trace:
 #3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
 #4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #5 {main} in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
+[04-May-2022 07:36:31 UTC] PHP Warning:  Use of undefined constant token - assumed 'token' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 117
+[04-May-2022 07:36:31 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Firebase\JWT\JWT::encode() must be of the type array, string given, called in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 67 and defined in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php:184
+Stack trace:
+#0 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php(67): Firebase\JWT\JWT::encode('token', 'fsdfasfsdfzcc<c...', 'HS256')
+#1 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php(57): PostController::postLogin('usuarios', Array, 'usuario')
+#2 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php(45): include('C:\\wamp64\\www\\p...')
+#3 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\routes.controller.php(11): include('C:\\wamp64\\www\\p...')
+#4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
+#5 {main} in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
+[04-May-2022 07:50:34 UTC] PHP Notice:  Undefined index: comment in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 81
+[04-May-2022 07:51:03 UTC] PHP Notice:  Undefined index: comment in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 81
+[04-May-2022 16:39:12 UTC] PHP Notice:  Undefined index: comment in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 82
