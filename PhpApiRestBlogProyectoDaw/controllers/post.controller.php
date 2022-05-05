@@ -40,6 +40,50 @@ class PostController{
 
             $return = new PostController();
             $return->fncResponse($response,null,$suffix);
+        }else{
+
+            /*=========================================
+            Registro de usuarios desde aplicaciones externas
+            =========================================*/
+
+            $response = PostModel::postData($table, $data);
+
+            if(isset($update['comment']) && $update['comment'] == 'The process was successful'){
+
+                /*=================================================
+                Validar que el usuario exista en BD
+                ==================================================*/
+                $response = GetModel::getDataFilter($table, "*", "nick_".$suffix, $data["nick_".$suffix], null,null,null,null);
+
+                if (!empty($response)) {
+                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
+
+                    $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
+                    
+                    /*=========================================
+                    Actualizar la base de datos con el token
+                    =========================================*/
+
+                    $data = array(
+                        "token_".$suffix => $jwt,
+                        'token_exp_'.$suffix => $token['exp']
+                    );
+
+                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+
+                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
+
+                    if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
+                        $response[0]->{'token_'.$suffix} = $jwt;
+                        $response[0]->{'token_exp_'.$suffix} = $token['exp'];
+
+                        $return = new PostController();
+                        $return->fncResponse($response, null, $suffix);
+                    }
+                }
+
+            }
+
         }
     }
 
@@ -55,37 +99,64 @@ class PostController{
 
         if(!empty($response)){
             
-            /*=========================================
-            Encriptamos la contraseña
-            =========================================*/
-            $crypt = crypt($data['pass_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
+            if($response[0]->{'pass_'.$suffix} != null){
 
-            if($response[0]->{'pass_'.$suffix} == $crypt){
-
-                $token = Connection::jwt($response[0]->{'nick_'.$suffix},$response[0]->{'nick_'.$suffix});
-
-                $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
-                
                 /*=========================================
-                Actualizar la base de datos con el token
+                Encriptamos la contraseña
                 =========================================*/
+                $crypt = crypt($data['pass_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
 
-                $data = array(
-                    "token_".$suffix => $jwt,
-                    'token_exp_'.$suffix => $token['exp']
-                );
+                if ($response[0]->{'pass_'.$suffix} == $crypt) {
+                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
 
-                $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+                    $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
+                    
+                    /*=========================================
+                    Actualizar la base de datos con el token
+                    =========================================*/
 
-                //echo '<pre>'; print_r($update); echo '</pre>'; return;
+                    $data = array(
+                        "token_".$suffix => $jwt,
+                        'token_exp_'.$suffix => $token['exp']
+                    );
 
-                if(isset($update['comment']) && $update['comment'] == 'The process was successful'){
+                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
 
-                    $response[0]->{'token_'.$suffix} = $jwt;
-                    $response[0]->{'token_exp_'.$suffix} = $token['exp'];
+                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
 
-                    $return = new PostController();
-                    $return->fncResponse($response,null,$suffix);
+                    if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
+                        $response[0]->{'token_'.$suffix} = $jwt;
+                        $response[0]->{'token_exp_'.$suffix} = $token['exp'];
+
+                        $return = new PostController();
+                        $return->fncResponse($response, null, $suffix);
+                    }
+                }else{
+
+                     /*=========================================
+                    Actualizamos el token para usuarios logueados desde app externas
+                    =========================================*/
+
+                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
+
+                    $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
+
+                    $data = array(
+                        "token_".$suffix => $jwt,
+                        'token_exp_'.$suffix => $token['exp']
+                    );
+
+                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+
+                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
+
+                    if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
+                        $response[0]->{'token_'.$suffix} = $jwt;
+                        $response[0]->{'token_exp_'.$suffix} = $token['exp'];
+
+                        $return = new PostController();
+                        $return->fncResponse($response, null, $suffix);
+                    }
 
                 }
 
