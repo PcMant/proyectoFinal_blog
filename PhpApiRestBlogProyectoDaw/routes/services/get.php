@@ -1,16 +1,15 @@
 <?php
 
-require_once 'controllers/get.controller.php';
+require_once "controllers/get.controller.php";
+require_once "models/connection.php";
 
-$table = explode('?',$routesArray[3])[0];
-
-$select = $_GET['select'] ?? '*';
-$orderBy = $_GET['orderBy'] ?? null;
-$orderMode = $_GET['orderMode'] ?? null;
-$startAt = $_GET['startAt'] ?? null;
-$endAt = $_GET['endAt'] ?? null;
-$filterTo = $_GET['filterTo'] ?? null;
-$inTo = $_GET['inTo'] ?? null;
+$select = $_GET["select"] ?? "*";
+$orderBy = $_GET["orderBy"] ?? null;
+$orderMode = $_GET["orderMode"] ?? null;
+$startAt = $_GET["startAt"] ?? null;
+$endAt = $_GET["endAt"] ?? null;
+$filterTo = $_GET["filterTo"] ?? null;
+$inTo = $_GET["inTo"] ?? null;
 
 $response = new GetController();
 
@@ -73,9 +72,20 @@ Peticiones GET para selección de rangos con relaciones
 
 }else{
 
-    /*=====================================
-    Peticiones GET sin filtro
-    =====================================*/
+	/*=============================================
+	Peticiones GET sin filtro
+	=============================================*/
 
-    $response->getData($table, $select, $orderBy,$orderMode,$startAt,$endAt);   
+	$response -> getData($table, $select,$orderBy,$orderMode,$startAt,$endAt);
+
+
 }
+
+
+
+
+
+
+
+
+

@@ -18,7 +18,7 @@ class PostController{
         $response = PostModel::postData($table,$data);
 
         $return = new PostController();
-        $return->fncResponse($response,null,$suffix);
+        $return->fncResponse($response,null,null);
 
     }
 
@@ -27,14 +27,14 @@ class PostController{
     ==================================================*/
     static public function postRegister($table, $data, $suffix){
 
-        if(isset($data['pass_'.$suffix]) && !empty($data['pass_'.$suffix])){
+        if(isset($data['password_'.$suffix]) && !empty($data['password_'.$suffix])){
 
             /*=========================================
             Encriptamos la contraseña
             =========================================*/
-            $crypt = crypt($data['pass_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
+            $crypt = crypt($data['password_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
 
-            $data['pass_'.$suffix] = $crypt;
+            $data['password_'.$suffix] = $crypt;
 
             $response = PostModel::postData($table, $data);
 
@@ -43,20 +43,20 @@ class PostController{
         }else{
 
             /*=========================================
-            Registro de usuarios desde aplicaciones externas
+            Registro de usuarios desde APP externas
             =========================================*/
 
             $response = PostModel::postData($table, $data);
 
-            if(isset($update['comment']) && $update['comment'] == 'The process was successful'){
+            if(isset($response['comment']) && $response['comment'] == 'The process was successful'){
 
                 /*=================================================
                 Validar que el usuario exista en BD
                 ==================================================*/
-                $response = GetModel::getDataFilter($table, "*", "nick_".$suffix, $data["nick_".$suffix], null,null,null,null);
+                $response = GetModel::getDataFilter($table, "*", "email_".$suffix, $data["email_".$suffix], null,null,null,null);
 
                 if (!empty($response)) {
-                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
+                    $token = Connection::jwt($response[0]->{'id_'.$suffix}, $response[0]->{'email_'.$suffix});
 
                     $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
                     
@@ -69,7 +69,7 @@ class PostController{
                         'token_exp_'.$suffix => $token['exp']
                     );
 
-                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+                    $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
                     //echo '<pre>'; print_r($update); echo '</pre>'; return;
 
@@ -95,19 +95,19 @@ class PostController{
         /*=================================================
         Validar que el usuario exista en BD
         ==================================================*/
-        $response = GetModel::getDataFilter($table, "*", "nick_".$suffix, $data["nick_".$suffix], null,null,null,null);
+        $response = GetModel::getDataFilter($table, "*", "email_".$suffix, $data["email_".$suffix], null,null,null,null);
 
         if(!empty($response)){
             
-            if($response[0]->{'pass_'.$suffix} != null){
+            if($response[0]->{'password_'.$suffix} != null){
 
                 /*=========================================
                 Encriptamos la contraseña
                 =========================================*/
-                $crypt = crypt($data['pass_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
+                $crypt = crypt($data['password_'.$suffix], '$2a$07$azybxcags23425sdg23sdfhsd$');
 
-                if ($response[0]->{'pass_'.$suffix} == $crypt) {
-                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
+                if ($response[0]->{'password_'.$suffix} == $crypt) {
+                    $token = Connection::jwt($response[0]->{'id_'.$suffix}, $response[0]->{'email_'.$suffix});
 
                     $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
                     
@@ -120,7 +120,7 @@ class PostController{
                         'token_exp_'.$suffix => $token['exp']
                     );
 
-                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+                    $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
                     //echo '<pre>'; print_r($update); echo '</pre>'; return;
 
@@ -137,7 +137,7 @@ class PostController{
                     Actualizamos el token para usuarios logueados desde app externas
                     =========================================*/
 
-                    $token = Connection::jwt($response[0]->{'nick_'.$suffix}, $response[0]->{'nick_'.$suffix});
+                    $token = Connection::jwt($response[0]->{'id_'.$suffix}, $response[0]->{'email_'.$suffix});
 
                     $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
 
@@ -146,7 +146,7 @@ class PostController{
                         'token_exp_'.$suffix => $token['exp']
                     );
 
-                    $update = PutModel::putData($table, $data, $response[0]->{'nick_'.$suffix}, 'nick_'.$suffix);
+                    $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
                     //echo '<pre>'; print_r($update); echo '</pre>'; return;
 
@@ -170,7 +170,7 @@ class PostController{
         }else{
             $response = null;
             $return = new PostController();
-            $return->fncResponse($response, "Wrong nick",$suffix);
+            $return->fncResponse($response, "Wrong email",$suffix);
         }
     }
 
@@ -185,8 +185,8 @@ class PostController{
         /*==================================================
         Quitamos la contraseña de la respuesta
         ==================================================*/
-        if(isset($response[0]->{'pass_'.$suffix})){
-            unset($response[0]->{'pass_'.$suffix});
+        if(isset($response[0]->{'password_'.$suffix})){
+            unset($response[0]->{'password_'.$suffix});
         }
 
             $json = array(

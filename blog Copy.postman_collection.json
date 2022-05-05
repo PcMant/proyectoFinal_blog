@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9fd82f78-1534-4a7e-bfb0-201e75e7060e",
+		"_postman_id": "ec41581b-0ea3-43bd-ad1e-abe674be705e",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,20 +11,25 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=*",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo",
-							"description": "Columnas a mostrar de no existir por defecto son todas"
+							"value": "titulo_article",
+							"description": "Columnas a mostrar de no existir por defecto son todas",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
 						}
 					]
 				}
@@ -37,27 +42,29 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&equalTo=juan&linkTo=usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article&equalTo=9&linkTo=id_user_article",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo,usuario"
+							"value": "titulo_article,id_user_article"
 						},
 						{
 							"key": "equalTo",
-							"value": "juan"
+							"value": "9",
+							"description": "Valor a comprarar, cada valor separar por coma así que no usarlo para valores con comas"
 						},
 						{
 							"key": "linkTo",
-							"value": "usuario"
+							"value": "id_user_article",
+							"description": "Filtros, internamente en el SQL usa = y si es más de uno usa AND"
 						}
 					]
 				}
@@ -70,27 +77,27 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&linkTo=titulo,usuario&equalTo=test_juan",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo,usuario"
+							"value": "titulo_article,id_user_article"
 						},
 						{
 							"key": "linkTo",
-							"value": "titulo,usuario"
+							"value": "titulo_article,id_user_article"
 						},
 						{
 							"key": "equalTo",
-							"value": "test_juan"
+							"value": "test,9"
 						}
 					]
 				}
@@ -103,31 +110,31 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&linkTo=titulo,usuario&equalTo=test_juan&orderBy=titulo&orderMode=DESC",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=id_article,titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9&orderBy=id_article&orderMode=DESC",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo,usuario"
+							"value": "id_article,titulo_article,id_user_article"
 						},
 						{
 							"key": "linkTo",
-							"value": "titulo,usuario"
+							"value": "titulo_article,id_user_article"
 						},
 						{
 							"key": "equalTo",
-							"value": "test_juan"
+							"value": "test,9"
 						},
 						{
 							"key": "orderBy",
-							"value": "titulo"
+							"value": "id_article"
 						},
 						{
 							"key": "orderMode",
@@ -144,19 +151,19 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=usuario,categoria&startAt=0&endAt=5",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article,id_category_article&startAt=0&endAt=1",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "usuario,categoria"
+							"value": "titulo_article,id_user_article,id_category_article"
 						},
 						{
 							"key": "startAt",
@@ -164,7 +171,7 @@
 						},
 						{
 							"key": "endAt",
-							"value": "5"
+							"value": "1"
 						}
 					]
 				}
@@ -177,19 +184,19 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=usuario,categoria&startAt=0&endAt=5&linkTo=usuario&equalTo=juan&orderMode=DESC&orderBy=categoria",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=id_article,id_user_article,id_category_article&startAt=0&endAt=5&linkTo=id_user_article&equalTo=9&orderMode=DESC&orderBy=id_article",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "usuario,categoria"
+							"value": "id_article,id_user_article,id_category_article"
 						},
 						{
 							"key": "startAt",
@@ -201,11 +208,11 @@
 						},
 						{
 							"key": "linkTo",
-							"value": "usuario"
+							"value": "id_user_article"
 						},
 						{
 							"key": "equalTo",
-							"value": "juan"
+							"value": "9"
 						},
 						{
 							"key": "orderMode",
@@ -213,7 +220,7 @@
 						},
 						{
 							"key": "orderBy",
-							"value": "categoria"
+							"value": "id_article"
 						}
 					]
 				}
@@ -226,7 +233,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articulos?select=nick&rel=articulos,usuarios&type=usuario,nick&linkTo=nick&equalTo=juan",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=email_user,titulo_article&rel=articles,users&type=article,user&linkTo=email_user&equalTo=juan",
 					"host": [
 						"localhost"
 					],
@@ -234,28 +241,38 @@
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
 						"relations",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "nick"
+							"value": "email_user,titulo_article"
 						},
 						{
 							"key": "rel",
-							"value": "articulos,usuarios"
+							"value": "articles,users"
 						},
 						{
 							"key": "type",
-							"value": "usuario,nick"
+							"value": "article,user"
 						},
 						{
 							"key": "linkTo",
-							"value": "nick"
+							"value": "email_user"
 						},
 						{
 							"key": "equalTo",
 							"value": "juan"
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "1",
+							"disabled": true
 						}
 					]
 				}
@@ -268,27 +285,27 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&search=juan&linkTo=usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article&linkTo=id_user_article&search=9",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo,usuario"
-						},
-						{
-							"key": "search",
-							"value": "juan"
+							"value": "titulo_article,id_user_article"
 						},
 						{
 							"key": "linkTo",
-							"value": "usuario"
+							"value": "id_user_article"
+						},
+						{
+							"key": "search",
+							"value": "9"
 						}
 					]
 				}
@@ -301,27 +318,28 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articulos?select=titulo,usuario&search=juan&linkTo=usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?linkTo=titulo_article,id_article&search=test,3",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "titulo,usuario"
-						},
-						{
-							"key": "search",
-							"value": "juan"
+							"value": "titulo_article,id_user_article",
+							"disabled": true
 						},
 						{
 							"key": "linkTo",
-							"value": "usuario"
+							"value": "titulo_article,id_article"
+						},
+						{
+							"key": "search",
+							"value": "test,3"
 						}
 					]
 				}
@@ -334,7 +352,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articulos?type=usuario,nick&rel=articulos,usuarios&select=nick&linkTo=usuario,titulo&search=juan_test",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?rel=articles,users,categories&type=article,user,category&select=titulo_article,name_user,name_category&linkTo=email_user,titulo_article&search=juan,test",
 					"host": [
 						"localhost"
 					],
@@ -342,28 +360,28 @@
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
 						"relations",
-						"articulos"
+						"articles"
 					],
 					"query": [
 						{
-							"key": "type",
-							"value": "usuario,nick"
+							"key": "rel",
+							"value": "articles,users,categories"
 						},
 						{
-							"key": "rel",
-							"value": "articulos,usuarios"
+							"key": "type",
+							"value": "article,user,category"
 						},
 						{
 							"key": "select",
-							"value": "nick"
+							"value": "titulo_article,name_user,name_category"
 						},
 						{
 							"key": "linkTo",
-							"value": "usuario,titulo"
+							"value": "email_user,titulo_article"
 						},
 						{
 							"key": "search",
-							"value": "juan_test"
+							"value": "juan,test"
 						}
 					]
 				}
@@ -376,42 +394,45 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?select=nombre&between1=1990-1-1&between2=2023-1-1&linkTo=fecha&filterTo=tipo&inTo=test",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,date_created_article,date_updated_article&between1=2022-05-01 00:00:00&between2=2022-05-06 00:00:00&linkTo=date_created_article&filterTo=id_article&inTo=3,4",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "nombre"
+							"value": "titulo_article,date_created_article,date_updated_article",
+							"description": "Columnas a mostrar"
 						},
 						{
 							"key": "between1",
-							"value": "1990-1-1",
+							"value": "2022-05-01 00:00:00",
 							"description": "valor1 del rango"
 						},
 						{
 							"key": "between2",
-							"value": "2023-1-1",
+							"value": "2022-05-06 00:00:00",
 							"description": "valor2 del rango"
 						},
 						{
 							"key": "linkTo",
-							"value": "fecha",
+							"value": "date_created_article",
 							"description": "Con la columna con la que se enlaza"
 						},
 						{
 							"key": "filterTo",
-							"value": "tipo"
+							"value": "id_article",
+							"description": "Filtrado mediante la sentencia IN, sirve para comarar multiples valores"
 						},
 						{
 							"key": "inTo",
-							"value": "test"
+							"value": "3,4",
+							"description": "El valor filtrado"
 						}
 					]
 				}
@@ -424,50 +445,51 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?select=tipo,fecha&between1=1990-1-1&between2=2023-1-1&linkTo=fecha&filterTo=tipo&inTo=test&rel=usuarios,usuario_tipos&type=tipo,tipo",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=titulo_article,name_user,date_created_article,date_updated_article&between1=2022-05-01 00:00:00&between2=2022-05-06 00:00:00&linkTo=date_created_article&filterTo=id_article&inTo=3,4&rel=articles,users,categories&type=article,user,category",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"relations",
+						"articles"
 					],
 					"query": [
 						{
 							"key": "select",
-							"value": "tipo,fecha"
+							"value": "titulo_article,name_user,date_created_article,date_updated_article"
 						},
 						{
 							"key": "between1",
-							"value": "1990-1-1",
+							"value": "2022-05-01 00:00:00",
 							"description": "valor1 del rango"
 						},
 						{
 							"key": "between2",
-							"value": "2023-1-1",
+							"value": "2022-05-06 00:00:00",
 							"description": "valor2 del rango"
 						},
 						{
 							"key": "linkTo",
-							"value": "fecha",
+							"value": "date_created_article",
 							"description": "Con la columna con la que se enlaza"
 						},
 						{
 							"key": "filterTo",
-							"value": "tipo"
+							"value": "id_article"
 						},
 						{
 							"key": "inTo",
-							"value": "test"
+							"value": "3,4"
 						},
 						{
 							"key": "rel",
-							"value": "usuarios,usuario_tipos"
+							"value": "articles,users,categories"
 						},
 						{
 							"key": "type",
-							"value": "tipo,tipo"
+							"value": "article,user,category"
 						}
 					]
 				}
@@ -483,21 +505,21 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "categoria",
-							"value": "test25",
+							"key": "name_category",
+							"value": "test25578",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/categorias",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/categories",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"categorias"
+						"categories"
 					]
 				}
 			},
@@ -512,35 +534,35 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "nombre_usuario",
-							"value": "Juan",
+							"key": "name_user",
+							"value": "Juan T",
 							"type": "text"
 						},
 						{
-							"key": "apellidos_usuario",
-							"value": "Molina Gómez R",
+							"key": "lastname_user",
+							"value": "Molina Gómez",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=juan&nameId=nick_usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?id=9&nameId=id_user",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"users"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "juan"
+							"value": "9"
 						},
 						{
 							"key": "nameId",
-							"value": "nick_usuario"
+							"value": "id_user"
 						}
 					]
 				}
@@ -553,23 +575,23 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?id=test1&nameId=nick",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?id=33&nameId=id_user",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"users"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "test1"
+							"value": "33"
 						},
 						{
 							"key": "nameId",
-							"value": "nick"
+							"value": "id_user"
 						}
 					]
 				}
@@ -585,41 +607,41 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "nick_usuario",
-							"value": "registro",
+							"key": "email_user",
+							"value": "juan",
 							"type": "text"
 						},
 						{
-							"key": "nombre_usuario",
+							"key": "name_user",
 							"value": "Juan",
 							"type": "default"
 						},
 						{
-							"key": "apellidos_usuario",
+							"key": "lastname_user",
 							"value": "Molina",
 							"type": "default"
 						},
 						{
-							"key": "tipo_usuario",
-							"value": "admin",
+							"key": "id_usertype_user",
+							"value": "1",
 							"type": "default"
 						},
 						{
-							"key": "pass_usuario",
+							"key": "password_user",
 							"value": "1234",
 							"type": "default"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?register=true&suffix=usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?register=true&suffix=user",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"users"
 					],
 					"query": [
 						{
@@ -628,7 +650,7 @@
 						},
 						{
 							"key": "suffix",
-							"value": "usuario"
+							"value": "user"
 						}
 					]
 				}
@@ -644,41 +666,41 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "nick_usuario",
+							"key": "email_user",
 							"value": "registro",
 							"type": "text"
 						},
 						{
-							"key": "nombre_usuario",
+							"key": "name_user",
 							"value": "Juan",
 							"type": "default"
 						},
 						{
-							"key": "apellidos_usuario",
+							"key": "lastname_user",
 							"value": "Molina",
 							"type": "default"
 						},
 						{
-							"key": "tipo_usuario",
-							"value": "admin",
+							"key": "id_usertype_user",
+							"value": "1",
 							"type": "default"
 						},
 						{
-							"key": "pass_usuario",
+							"key": "password_user",
 							"value": "1234",
 							"type": "default"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/usuarios?login=true&suffix=usuario",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?login=true&suffix=user",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"proyectoFinal_blog",
 						"PhpApiRestBlogProyectoDaw",
-						"usuarios"
+						"users"
 					],
 					"query": [
 						{
@@ -687,7 +709,7 @@
 						},
 						{
 							"key": "suffix",
-							"value": "usuario"
+							"value": "user"
 						}
 					]
 				}
