@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ec41581b-0ea3-43bd-ad1e-abe674be705e",
+		"_postman_id": "acdfb8e6-a02f-48bd-ab5d-f8283f145435",
 		"name": "blog Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -608,7 +608,7 @@
 					"urlencoded": [
 						{
 							"key": "email_user",
-							"value": "juan",
+							"value": "juan77",
 							"type": "text"
 						},
 						{
@@ -629,7 +629,8 @@
 						{
 							"key": "password_user",
 							"value": "1234",
-							"type": "default"
+							"type": "default",
+							"disabled": true
 						}
 					]
 				},

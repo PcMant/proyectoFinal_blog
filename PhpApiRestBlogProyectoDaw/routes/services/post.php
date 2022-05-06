@@ -57,6 +57,10 @@ if(isset($_POST)){
 		$response -> postLogin($table,$_POST,$suffix);
 
 	}else{
+		/*=================================
+    	Peticiones POST para usuarios autorizados
+    	=================================*/
+
 
 		/*=================================
     	Solicitamos respuesta del controlador para crear datos en cualquier tabla
