@@ -71,8 +71,6 @@ class PostController{
 
                     $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
-                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
-
                     if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
                         $response[0]->{'token_'.$suffix} = $jwt;
                         $response[0]->{'token_exp_'.$suffix} = $token['exp'];
@@ -112,7 +110,7 @@ class PostController{
                     $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
                     
                     /*=========================================
-                    Actualizar la base de datos con el token
+                    Actualizar la base de datos con el token del usuario
                     =========================================*/
 
                     $data = array(
@@ -122,7 +120,6 @@ class PostController{
 
                     $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
-                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
 
                     if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
                         $response[0]->{'token_'.$suffix} = $jwt;
@@ -131,9 +128,18 @@ class PostController{
                         $return = new PostController();
                         $return->fncResponse($response, null, $suffix);
                     }
+
                 }else{
 
-                     /*=========================================
+                    $response = null;
+                    $return = new PostController();
+                    $return->fncResponse($response, "Wrong password",$suffix);  
+
+                }
+
+            }else{
+
+                    /*=========================================
                     Actualizamos el token para usuarios logueados desde app externas
                     =========================================*/
 
@@ -158,19 +164,8 @@ class PostController{
                         $return->fncResponse($response, null, $suffix);
                     }
 
-                }
-
-            }else{
-
-                $response = null;
-                $return = new PostController();
-                $return->fncResponse($response, "Wrong password",$suffix);
-
             }
-        }else{
-            $response = null;
-            $return = new PostController();
-            $return->fncResponse($response, "Wrong email",$suffix);
+            
         }
     }
 

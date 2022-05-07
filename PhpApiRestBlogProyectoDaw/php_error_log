@@ -984,3 +984,4 @@ Stack trace:
 #4 C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php(19): RoutesController->index()
 #5 {main}
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
+[07-May-2022 01:32:54 UTC] PHP Notice:  Undefined index: password_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 105
