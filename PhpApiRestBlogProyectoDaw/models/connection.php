@@ -157,4 +157,23 @@ class Connection
 
     }
 
+    /*=============================================
+    Validamos que el token no haya expirado
+    =============================================*/
+
+    public static function apiKey(){
+        return 'AtWV3mYpVNrQvKdD4gWvjbF2imGLQh';
+    }
+
+    /*=============================================
+	Acceso público
+	=============================================*/
+	static public function publicAccess(){
+
+		$tables = ["articles"];
+
+		return $tables;
+
+	}
+
 }
