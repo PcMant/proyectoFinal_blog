@@ -139,33 +139,37 @@ class PostController{
 
             }else{
 
-                    /*=========================================
-                    Actualizamos el token para usuarios logueados desde app externas
-                    =========================================*/
+                /*=========================================
+                Actualizamos el token para usuarios logueados desde app externas
+                =========================================*/
 
-                    $token = Connection::jwt($response[0]->{'id_'.$suffix}, $response[0]->{'email_'.$suffix});
+                $token = Connection::jwt($response[0]->{'id_'.$suffix}, $response[0]->{'email_'.$suffix});
 
-                    $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
+                $jwt = JWT::encode($token, 'fsdfasfsdfzcc1cszdssf', 'HS256');
+                
+                $data = array(
+                    "token_".$suffix => $jwt,
+                    'token_exp_'.$suffix => $token['exp']
+                );
 
-                    $data = array(
-                        "token_".$suffix => $jwt,
-                        'token_exp_'.$suffix => $token['exp']
-                    );
+                $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
-                    $update = PutModel::putData($table, $data, $response[0]->{'email_'.$suffix}, 'email_'.$suffix);
 
-                    //echo '<pre>'; print_r($update); echo '</pre>'; return;
+                if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
+                    $response[0]->{'token_'.$suffix} = $jwt;
+                    $response[0]->{'token_exp_'.$suffix} = $token['exp'];
 
-                    if (isset($update['comment']) && $update['comment'] == 'The process was successful') {
-                        $response[0]->{'token_'.$suffix} = $jwt;
-                        $response[0]->{'token_exp_'.$suffix} = $token['exp'];
-
-                        $return = new PostController();
-                        $return->fncResponse($response, null, $suffix);
-                    }
+                    $return = new PostController();
+                    $return->fncResponse($response, null, $suffix);
+                }
 
             }
             
+        }else{
+
+            $response = null;
+            $return = new PostController();
+            $return->fncResponse($response, "Wrong password",$suffix);
         }
     }
 

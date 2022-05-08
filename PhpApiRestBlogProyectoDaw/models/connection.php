@@ -2,6 +2,9 @@
 
 require_once "vendor/autoload.php";
 use Firebase\JWT\JWT;
+
+require_once "get.model.php";
+
 class Connection
 {
     
@@ -117,4 +120,25 @@ class Connection
         return $token;
 
     }
+
+    /*========================================
+    Validar el token de seguridad
+    ========================================*/
+
+    static public function tokenValidate($token,$table,$suffix){
+
+        /*================================
+        Trataremos al usuario acuerdo al token
+        ================================*/
+        $user = GetModel::getDataFilter($table, '*', 'token_'.$suffix, $token, null,null,null,null);
+
+        if(!empty($user)){
+
+            /*=============================================
+            Validamos que el token no haya expirado
+            =============================================*/
+        }
+
+    }
+
 }

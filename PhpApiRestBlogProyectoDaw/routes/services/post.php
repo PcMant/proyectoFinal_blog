@@ -60,7 +60,14 @@ if(isset($_POST)){
 		/*=================================
     	Peticiones POST para usuarios autorizados
     	=================================*/
+		if($_GET['token']){
 
+			$table = $_GET['table'] ?? 'users';
+			$suffix = $_GET['suffix'] ?? 'user';
+
+			$validate = Connection::tokenValidate($_GET['token'],$table,$suffix);
+
+		}
 
 		/*=================================
     	Solicitamos respuesta del controlador para crear datos en cualquier tabla
