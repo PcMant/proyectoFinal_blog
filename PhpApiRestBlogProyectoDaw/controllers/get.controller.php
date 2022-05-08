@@ -120,7 +120,7 @@ class GetController{
 
 				'status' => 200,
 				'total' => count($response),
-				'results' => $response
+				'result' => $response
 
 			);
 
@@ -129,7 +129,7 @@ class GetController{
 			$json = array(
 
 				'status' => 404,
-				'results' => 'Not Found',
+				'result' => 'Not Found',
 				'method' => 'get'
 
 			);

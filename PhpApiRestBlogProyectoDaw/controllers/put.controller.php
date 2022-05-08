@@ -28,7 +28,7 @@ class PutController{
 			$json = array(
 
 				'status' => 200,
-				'results' => $response
+				'result' => $response
 
 			);
 
@@ -37,7 +37,7 @@ class PutController{
 			$json = array(
 
 				'status' => 404,
-				'results' => 'Not Found',
+				'result' => 'Not Found',
 				'method' => 'put'
 
 			);

@@ -191,7 +191,7 @@ class PostController{
             $json = array(
                 'status'    =>  200,
                 'method'    =>  'POST',
-                'results'      =>  $response
+                'result'      =>  $response
             );
 
         }else{
