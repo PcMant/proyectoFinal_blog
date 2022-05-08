@@ -986,3 +986,13 @@ Stack trace:
   thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\vendor\firebase\php-jwt\src\JWT.php on line 184
 [07-May-2022 01:32:54 UTC] PHP Notice:  Undefined index: password_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 105
 [08-May-2022 02:24:48 UTC] PHP Notice:  Undefined index: password_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 105
+[08-May-2022 16:00:06 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 70
+[08-May-2022 16:00:06 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 83
+[08-May-2022 16:00:06 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 99
+[08-May-2022 16:04:19 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 70
+[08-May-2022 16:04:19 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 83
+[08-May-2022 16:04:19 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 99
+[08-May-2022 16:04:28 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 70
+[08-May-2022 16:04:28 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 83
+[08-May-2022 16:04:28 UTC] PHP Notice:  Undefined variable: validata in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\post.php on line 99
+[08-May-2022 16:31:22 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 82

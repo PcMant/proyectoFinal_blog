@@ -137,6 +137,22 @@ class Connection
             /*=============================================
             Validamos que el token no haya expirado
             =============================================*/
+
+            $time = time();
+
+            if($time < $user[0]->{'token_exp_'.$suffix}){
+
+                return 'ok';
+
+            }else{
+
+                return 'expired';
+
+            }
+        }else{
+
+            return 'no-auth';
+
         }
 
     }
