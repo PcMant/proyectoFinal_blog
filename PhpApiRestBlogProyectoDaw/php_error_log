@@ -5,8 +5,10 @@
 [25-Apr-2022 08:03:09 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 14
 [25-Apr-2022 08:03:10 UTC] PHP Notice:  Undefined variable: json in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 14
 [25-Apr-2022 08:22:29 UTC] PHP Parse error:  syntax error, unexpected '$_SERVER' (T_VARIABLE), expecting '(' in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 26
-[25-Apr-2022 08:22:56 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
-[25-Apr-2022 08:22:59 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
+[25-Apr-2022 08:22:56 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;
+' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
+[25-Apr-2022 08:22:59 UTC] PHP Parse error:  syntax error, unexpected ''</pre>;
+' (T_ENCAPSED_AND_WHITESPACE) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 28
 [25-Apr-2022 09:05:58 UTC] PHP Notice:  Undefined variable: infoDB in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 20
 [25-Apr-2022 09:27:32 UTC] PHP Notice:  Undefined variable: routeArray in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
 [25-Apr-2022 09:27:32 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\services\get.php on line 3
@@ -1021,3 +1023,9 @@ Stack trace:
 [23-May-2022 00:45:50 UTC] PHP Notice:  Undefined index: Authorization in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 9
 [23-May-2022 00:47:02 UTC] PHP Notice:  Undefined index: Authorization in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 9
 [23-May-2022 00:47:10 UTC] PHP Notice:  Undefined index: Authorization in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 9
+[23-May-2022 10:29:31 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[23-May-2022 10:39:32 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[23-May-2022 10:39:34 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[23-May-2022 16:20:58 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[23-May-2022 16:20:58 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[23-May-2022 16:20:59 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32

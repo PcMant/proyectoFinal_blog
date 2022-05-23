@@ -9,6 +9,7 @@ $routesArray = array_filter($routesArray);
 /*===========================================
 Cuando no se hace ninguna petición a la API
 ============================================*/
+// echo json_encode(getallheaders(), http_response_code(200)); return;
 
 if(count($routesArray) == 2){
 
