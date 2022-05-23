@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "acdfb8e6-a02f-48bd-ab5d-f8283f145435",
 		"name": "blog Copy",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16317252"
 	},
 	"item": [
 		{
@@ -229,11 +230,23 @@
 		},
 		{
 			"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=email_user,titulo_article&rel=articles,users&type=article,user&linkTo=email_user&equalTo=juan",
+					"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category",
 					"host": [
 						"localhost"
 					],
@@ -246,23 +259,25 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "email_user,titulo_article"
+							"value": "id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article"
 						},
 						{
 							"key": "rel",
-							"value": "articles,users"
+							"value": "articles,users,categories"
 						},
 						{
 							"key": "type",
-							"value": "article,user"
+							"value": "article,user,category"
 						},
 						{
 							"key": "linkTo",
-							"value": "email_user"
+							"value": "email_user",
+							"disabled": true
 						},
 						{
 							"key": "equalTo",
-							"value": "juan"
+							"value": "juan",
+							"disabled": true
 						},
 						{
 							"key": "startAt",
@@ -273,11 +288,125 @@
 							"key": "endAt",
 							"value": "1",
 							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTMxNDY2NDgsImV4cCI6MTY1MzIzMzA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.3e-VwUtGABk6euOWAh-PL6N43I1YvEiFrF7SnjmkY1U",
+							"disabled": true
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category&linkTo=email_user&equalTo=juan&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTMxNDY2NDgsImV4cCI6MTY1MzIzMzA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.3e-VwUtGABk6euOWAh-PL6N43I1YvEiFrF7SnjmkY1U",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"relations",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article"
+								},
+								{
+									"key": "rel",
+									"value": "articles,users,categories"
+								},
+								{
+									"key": "type",
+									"value": "article,user,category"
+								},
+								{
+									"key": "linkTo",
+									"value": "email_user"
+								},
+								{
+									"key": "equalTo",
+									"value": "juan"
+								},
+								{
+									"key": "startAt",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "endAt",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTMxNDY2NDgsImV4cCI6MTY1MzIzMzA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.3e-VwUtGABk6euOWAh-PL6N43I1YvEiFrF7SnjmkY1U"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 21 May 2022 17:17:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1183"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 2,\n    \"result\": [\n        {\n            \"id_article\": \"3\",\n            \"titulo_article\": \"test\",\n            \"imagen_article\": null,\n            \"contenido_article\": \"test\",\n            \"meta_article\": null,\n            \"id_user\": \"9\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan T\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_category\": \"1\",\n            \"name_category\": \"\",\n            \"status_article\": \"0\",\n            \"date_created_article\": \"2022-05-05 12:25:33\",\n            \"date_updated_article\": \"2022-05-05 12:25:33\"\n        },\n        {\n            \"id_article\": \"4\",\n            \"titulo_article\": \"test\",\n            \"imagen_article\": null,\n            \"contenido_article\": \"test\",\n            \"meta_article\": null,\n            \"id_user\": \"9\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan T\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_category\": \"1\",\n            \"name_category\": \"\",\n            \"status_article\": \"0\",\n            \"date_created_article\": \"2022-05-05 12:25:59\",\n            \"date_updated_article\": \"2022-05-05 12:25:59\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "GET - Busqueda sin filtros ni relaciones",
