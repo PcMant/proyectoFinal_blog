@@ -1029,3 +1029,9 @@ Stack trace:
 [23-May-2022 16:20:58 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
 [23-May-2022 16:20:58 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
 [23-May-2022 16:20:59 UTC] PHP Notice:  Undefined offset: 3 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 32
+[24-May-2022 14:11:12 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
+[24-May-2022 15:01:35 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 82
+[24-May-2022 15:01:35 UTC] PHP Notice:  Undefined index: email_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
+[24-May-2022 15:01:50 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 82
+[24-May-2022 15:01:50 UTC] PHP Notice:  Undefined index: email_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
+[24-May-2022 15:58:56 UTC] PHP Notice:  Undefined index: email_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
