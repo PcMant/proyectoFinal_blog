@@ -3,7 +3,7 @@
 require_once "models/connection.php";
 require_once "controllers/post.controller.php";
 
-if(isset($_POST)){
+if(!empty($array_POST)){
 
 	/*=============================================
 	Separar propiedades en un arreglo
@@ -11,7 +11,7 @@ if(isset($_POST)){
 
 	$columns = array();
 	
-	foreach (array_keys($_POST) as $key => $value) {
+	foreach (array_keys($array_POST) as $key => $value) {
 
 		array_push($columns, $value);
 			
@@ -44,7 +44,7 @@ if(isset($_POST)){
 
 		$suffix = $_GET["suffix"] ?? "usuario";
 
-		$response -> postRegister($table,$_POST,$suffix);
+		$response -> postRegister($table,$array_POST,$suffix);
 
 	/*=============================================
 	Peticion POST para login de usuario
@@ -54,7 +54,7 @@ if(isset($_POST)){
 
 		$suffix = $_GET["suffix"] ?? "usuario";
 
-		$response -> postLogin($table,$_POST,$suffix);
+		$response -> postLogin($table,$array_POST,$suffix);
 
 	}else{
 
@@ -89,7 +89,7 @@ if(isset($_POST)){
 				Solicitamos respuesta del controlador para crear datos en cualquier tabla
 				=============================================*/		
 
-				$response -> postData($table,$_POST);
+				$response -> postData($table,$array_POST);
 
 			/*=============================================
 			Peticion POST para usuarios autorizados
@@ -108,7 +108,7 @@ if(isset($_POST)){
 
 				if($validate == "ok"){
 		
-					$response -> postData($table,$_POST);
+					$response -> postData($table,$array_POST);
 
 				}
 
@@ -156,7 +156,7 @@ if(isset($_POST)){
 
 			$json = array(
 			 	'status' => 400,
-			 	'result' => "Error: Authorization required"
+			 	'result' => "Error: Authorization required .I."
 			);
 
 			echo json_encode($json, http_response_code($json["status"]));
