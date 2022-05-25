@@ -8,12 +8,6 @@ ini_set('display_errors', 1);/* Mostrar errores desde el navegador */
 ini_set('display_errors', 1);/* Errores por log */
 ini_set('error_log', './php_error_log'); /* La ruta del fichero de log de erores */
 
-/*================================================
-SOLUCIÓN AL BODY PARA ANGULAR Y FRAMEWORKS CON PROBELAS SIMILARES
-=================================================*/
-// if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)) 
-//    $_POST = json_decode(file_get_contents('php://input'), true);
-
 
 /*==============================================
 CORS
@@ -25,6 +19,17 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
     die();
+}
+
+/*================================================
+SOLUCIÓN AL BODY PARA ANGULAR Y FRAMEWORKS CON PROBELAS SIMILARES
+=================================================*/
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)){ 
+    $arrayPOST = json_decode(file_get_contents('php://input'), true);
+
+    foreach($arrayPOST['params']['updates'] as $key => $value){
+        $_POST[$value['param']] = $value['value'];
+    }  
 }
 
 

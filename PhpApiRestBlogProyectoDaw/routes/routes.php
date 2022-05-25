@@ -2,6 +2,7 @@
 require_once "models/connection.php";
 require_once "controllers/get.controller.php";
 
+
 //Obteniendo las rutas y guardarlas en un array separados los directorios
 $routesArray = explode('/', $_SERVER['REQUEST_URI']);
 $routesArray = array_filter($routesArray);
@@ -9,7 +10,6 @@ $routesArray = array_filter($routesArray);
 /*===========================================
 Cuando no se hace ninguna petición a la API
 ============================================*/
-// echo json_encode(getallheaders(), http_response_code(200)); return;
 
 if(count($routesArray) == 2){
 
