@@ -1095,3 +1095,37 @@ Stack trace:
 [24-May-2022 22:52:52 UTC] PHP Warning:  Use of undefined constant param - assumed 'param' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 12
 [24-May-2022 22:52:52 UTC] PHP Warning:  Use of undefined constant param - assumed 'param' (this will throw an Error in a future version of PHP) in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 12
 [24-May-2022 22:57:47 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 12
+[25-May-2022 00:03:42 UTC] PHP Notice:  Undefined index: params in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:42 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:42 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 82
+[25-May-2022 00:03:42 UTC] PHP Notice:  Undefined index: email_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
+[25-May-2022 00:03:53 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:53 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 30
+[25-May-2022 00:03:53 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\models\connection.php on line 82
+[25-May-2022 00:03:53 UTC] PHP Notice:  Undefined index: email_user in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\controllers\post.controller.php on line 96
+[25-May-2022 00:19:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31
+[25-May-2022 00:20:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31
+[25-May-2022 00:20:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31
+[25-May-2022 00:21:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31
+[25-May-2022 00:21:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31
+[25-May-2022 00:21:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function copyOf() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php:31
+Stack trace:
+#0 {main}
+  thrown in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\index.php on line 31

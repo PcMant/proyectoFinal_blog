@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)){
     $arrayPOST = json_decode(file_get_contents('php://input'), true);
 
     foreach($arrayPOST['params']['updates'] as $key => $value){
-        $_POST[$value['param']] = $value['value'];
+        $_POST[$value['param']] = copyOf($value['value']);
     }  
 }
 
