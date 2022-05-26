@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)){
     }
 }
 
-// echo json_encode($_GET, http_response_code(200)); return;
+// echo json_encode($array_POST, http_response_code(200)); return;
 
 /*===========================================
 Cuando no se hace ninguna petición a la API
