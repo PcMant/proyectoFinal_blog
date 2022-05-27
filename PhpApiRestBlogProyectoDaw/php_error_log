@@ -32,3 +32,6 @@
 [26-May-2022 22:20:21 UTC] PHP Notice:  Undefined index: params in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 17
 [26-May-2022 22:20:21 UTC] PHP Notice:  Trying to access array offset on value of type null in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 17
 [26-May-2022 22:20:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 17
+[27-May-2022 16:21:25 UTC] PHP Notice:  Undefined variable: array_POST in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 26
+[27-May-2022 16:21:29 UTC] PHP Notice:  Undefined variable: array_POST in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 26
+[27-May-2022 16:22:00 UTC] PHP Notice:  Undefined variable: array_POST in C:\wamp64\www\proyectoFinal_blog\PhpApiRestBlogProyectoDaw\routes\routes.php on line 26
