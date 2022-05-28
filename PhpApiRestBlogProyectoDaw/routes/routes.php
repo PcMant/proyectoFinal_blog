@@ -11,19 +11,32 @@ $arrayHeaders = getallheaders();
 if(!empty($_POST)) {
     $array_POST = $_POST;
 }
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)){ 
+if (((isset($_GET['framejs']) && $_SERVER['REQUEST_METHOD'] == 'PUT') || $_SERVER['REQUEST_METHOD'] == 'POST') && empty($_POST)){ 
     $arrayPOST = json_decode(file_get_contents('php://input'), true);
 
     foreach($arrayPOST['params']['updates'] as $key => $value){
         $array_POST[$value['param']] = $value['value'];
     }
 
-    foreach($arrayPOST['headers']['lazyUpdate'] as $key => $value){
+    if($_SERVER['REQUEST_METHOD'] == 'PUT') $data = $array_POST;
+
+    foreach ($arrayPOST['headers']['lazyUpdate'] as $key => $value) {
         $arrayHeaders[$value['name']] = $value['value'];
     }
 }
 
-echo json_encode($arrayPOST, http_response_code(200)); return;
+// $test;
+
+// $data = array();
+// 	parse_str(file_get_contents('php://input'), $data);
+
+// if(!isset($_GET['framejs'])){
+//     $test = $data;
+// }else{
+//     $test = $array_POST;
+// }
+
+// echo json_encode($test, http_response_code(200)); return;
 
 /*===========================================
 Cuando no se hace ninguna petición a la API

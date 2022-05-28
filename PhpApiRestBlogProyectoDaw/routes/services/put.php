@@ -10,8 +10,10 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
 	Capturamos los datos del formulario
 	=============================================*/
 	
-	$data = array();
-	parse_str(file_get_contents('php://input'), $data);
+    if (!isset($_GET['framejs'])) {
+        $data = array();
+        parse_str(file_get_contents('php://input'), $data);
+    }
 		
 	/*=============================================
 	Separar propiedades en un arreglo
