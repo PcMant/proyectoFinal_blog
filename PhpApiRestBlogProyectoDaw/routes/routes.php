@@ -36,7 +36,7 @@ if (((isset($_GET['framejs']) && $_SERVER['REQUEST_METHOD'] == 'PUT') || $_SERVE
 //     $test = $array_POST;
 // }
 
-// echo json_encode($test, http_response_code(200)); return;
+// echo json_encode($_GET, http_response_code(200)); return;
 
 /*===========================================
 Cuando no se hace ninguna petición a la API
