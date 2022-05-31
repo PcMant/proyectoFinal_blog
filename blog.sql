@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 08-05-2022 a las 23:53:31
+-- Tiempo de generación: 31-05-2022 a las 17:30:58
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.4.23
 
@@ -32,27 +32,34 @@ USE `blog`;
 DROP TABLE IF EXISTS `articles`;
 CREATE TABLE IF NOT EXISTS `articles` (
   `id_article` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user_article` int(11) DEFAULT NULL,
+  `id_user_article` int(11) NOT NULL,
   `titulo_article` varchar(155) NOT NULL,
-  `imagen_article` mediumblob,
+  `imagen_article` varchar(300) DEFAULT NULL,
   `contenido_article` mediumtext NOT NULL,
-  `id_category_article` int(11) NOT NULL,
+  `id_category_article` int(11) NOT NULL DEFAULT '1',
   `meta_article` varchar(155) DEFAULT NULL,
-  `status_article` int(1) NOT NULL,
+  `status_article` int(1) NOT NULL DEFAULT '1',
   `date_created_article` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `date_updated_article` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_article`),
   KEY `fk_usuarios_articulos` (`id_user_article`),
   KEY `fk_categorias_articulos` (`id_category_article`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `articles`
 --
 
 INSERT INTO `articles` (`id_article`, `id_user_article`, `titulo_article`, `imagen_article`, `contenido_article`, `id_category_article`, `meta_article`, `status_article`, `date_created_article`, `date_updated_article`) VALUES
-(3, 9, 'test', NULL, 'test', 1, NULL, 0, '2022-05-05 10:25:33', '2022-05-05 10:25:33'),
-(4, 9, 'test', NULL, 'test', 1, NULL, 0, '2022-05-05 10:25:59', '2022-05-05 10:25:59');
+(3, 9, 'Artículo de prueba 1', 'https://as1.ftcdn.net/v2/jpg/04/89/73/56/1000_F_489735696_C02RJ7Qw3xPm16j31QmdDKrCxPvwEU73.jpg', '<p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\n                    </p>\n                    <p>\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\n                    </p>\n                    <p>  \n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \n                    </p>\n\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\n                    </p>\n                    <p>\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\n                    </p>\n                    <p>  \n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \n                    </p>\n\n                    <p>\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\n                    </p>\n                    <p>\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\n                    </p>\n                    <p>  \n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \n                    </p>\n', 1, NULL, 0, '2022-05-05 10:25:33', '2022-05-30 10:17:27'),
+(4, 9, 'test', 'https://c.pxhere.com/photos/e4/37/code_computer_technology_html_screen-121859.jpg!d', 'test\nEsto funciona?', 1, NULL, 0, '2022-05-05 10:25:59', '2022-05-30 12:25:28'),
+(5, 9, 'titulo', '', 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-28 18:43:16', '2022-05-30 00:39:55'),
+(6, 9, 'titulo', '', 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-28 18:43:51', '2022-05-30 12:17:08'),
+(7, 9, 'titulo', '', 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-28 18:44:23', '2022-05-30 12:17:25'),
+(12, 9, 'titulo', NULL, 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-31 16:22:23', '2022-05-31 16:22:23'),
+(13, 9, 'titulo', NULL, 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-31 16:25:11', '2022-05-31 16:25:11'),
+(14, 9, 'titulo', NULL, 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-31 16:51:43', '2022-05-31 16:51:43'),
+(15, 9, 'titulo', NULL, 'lorem ipsum, hola contenido', 1, NULL, 1, '2022-05-31 16:54:07', '2022-05-31 16:54:07');
 
 -- --------------------------------------------------------
 
@@ -68,23 +75,18 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `date_updated_category` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_category`),
   UNIQUE KEY `nombre_categoria` (`name_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `categories`
 --
 
 INSERT INTO `categories` (`id_category`, `name_category`, `date_created_category`, `date_updated_category`) VALUES
-(1, '', '2022-05-05 07:47:54', '2022-05-05 07:47:54'),
+(1, 'General', '2022-05-05 07:47:54', '2022-05-31 17:21:14'),
 (2, 'test', '2022-05-05 07:47:54', '2022-05-05 07:47:54'),
 (3, 'test23', '2022-05-05 07:47:54', '2022-05-05 07:47:54'),
 (4, 'test24', '2022-05-05 07:47:54', '2022-05-05 07:47:54'),
-(5, 'test25', '2022-05-05 07:47:54', '2022-05-05 07:47:54'),
-(7, 'test255', '2022-05-05 10:14:37', '2022-05-05 10:14:37'),
-(10, 'test2557', '2022-05-05 10:16:21', '2022-05-05 10:16:21'),
-(12, 'test25578', '2022-05-05 10:53:23', '2022-05-05 10:53:23'),
-(13, 'test289', '2022-05-08 16:12:57', '2022-05-08 16:12:57'),
-(19, 'test666', '2022-05-08 22:08:36', '2022-05-08 22:08:36');
+(5, 'test25', '2022-05-05 07:47:54', '2022-05-05 07:47:54');
 
 -- --------------------------------------------------------
 
@@ -112,7 +114,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `email_user` varchar(45) NOT NULL,
-  `foto_user` mediumblob,
+  `foto_user` varchar(255) DEFAULT NULL,
   `name_user` varchar(45) NOT NULL,
   `lastname_user` varchar(145) NOT NULL,
   `id_usertype_user` int(11) NOT NULL,
@@ -131,16 +133,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id_user`, `email_user`, `foto_user`, `name_user`, `lastname_user`, `id_usertype_user`, `password_user`, `token_user`, `token_exp_user`, `date_created_user`, `date_updated_user`) VALUES
-(2, 'prueba0', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', NULL, NULL, '2022-05-05 08:24:31', '2022-05-05 09:30:51'),
-(3, 'registro', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTE5NzY2NzYsImV4cCI6MTY1MjA2MzA3NiwiZGF0YSI6eyJpZCI6IjMiLCJlbWFpbCI6InJlZ2lzdHJvIn19.CuR0nBEopZ0Xm71CSf4-ZbERtbb9TyiIIXAwELgg2vA', '1652063076', '2022-05-05 08:24:31', '2022-05-08 02:24:36'),
-(4, 'registro00', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdelEdOKLMMZ1XZVdRuVIQExCo9D1L3ApK', NULL, NULL, '2022-05-05 08:24:31', '2022-05-05 09:30:51'),
-(5, 'registro01', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeO6pUILwWEC7BdU3dzNQ8kvmYGxNoFNq', NULL, NULL, '2022-05-05 08:24:31', '2022-05-05 09:30:51'),
-(6, 'registro23', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeOhavvj0pmtGSWuxPOPM2.ks6uf9H.s2', NULL, NULL, '2022-05-05 08:24:31', '2022-05-05 09:30:51'),
-(7, 'registro24', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeOhavvj0pmtGSWuxPOPM2.ks6uf9H.s2', NULL, NULL, '2022-05-05 08:24:31', '2022-05-05 09:30:51'),
-(8, 'registro699', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', NULL, NULL, '2022-05-05 09:12:39', '2022-05-05 09:12:39'),
-(9, 'juan', NULL, 'Juan T', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTE4ODcxOTEsImV4cCI6MTY1MTk3MzU5MSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.9Ssi0RDlGnoypWQpJli9PVd_03ID8l3WLYPfmWHf3Oo', '1651973591', '2022-05-05 10:21:54', '2022-05-07 01:33:11'),
-(13, 'juan77', NULL, 'Juan', 'Molina', 1, NULL, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTE4ODcxMjIsImV4cCI6MTY1MTk3MzUyMiwiZGF0YSI6eyJpZCI6IjEzIiwiZW1haWwiOiJqdWFuNzcifX0.uL5u6z_xGKD7JUu38EZPcRazTx8LUPFV_l0YUDnru-4', '1651973522', '2022-05-06 00:14:02', '2022-05-07 01:32:02'),
-(14, 'juan77@', NULL, 'Juan', 'Molina', 1, NULL, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTIwNDc2NDgsImV4cCI6MTY1MjEzNDA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.tASZO463czQ7Q25hTTURc6JotiaZWM11TUTdJauymH8', '1652134048', '2022-05-07 00:58:01', '2022-05-08 22:07:28');
+(9, 'juan@pcmant.com', NULL, 'Juan', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQwMTc5MjcsImV4cCI6MTY1NDEwNDMyNywiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW5AcGNtYW50LmNvbSJ9fQ.o1NjDzvxeYfcavdV77GbYGF5dfSJx1MwQIFXSm21zXU', '1654104327', '2022-05-05 10:21:54', '2022-05-31 17:25:27');
 
 -- --------------------------------------------------------
 
