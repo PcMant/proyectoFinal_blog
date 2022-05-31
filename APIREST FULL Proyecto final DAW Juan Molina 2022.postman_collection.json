@@ -1,0 +1,2663 @@
+{
+	"info": {
+		"_postman_id": "acdfb8e6-a02f-48bd-ab5d-f8283f145435",
+		"name": "APIREST FULL Proyecto final DAW Juan Molina 2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16317252"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar dato especifico",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article",
+							"description": "Selección de columnas"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Seleccionar dato especifico",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "titulo_article",
+									"description": "Columnas a mostrar de no existir por defecto son todas"
+								},
+								{
+									"key": "select",
+									"value": "*",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:44:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "436"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 6,\n    \"result\": [\n        {\n            \"titulo_article\": \"Art\\u00edculo de prueba 1\"\n        },\n        {\n            \"titulo_article\": \"test\"\n        },\n        {\n            \"titulo_article\": \"titulo\"\n        },\n        {\n            \"titulo_article\": \"titulo\"\n        },\n        {\n            \"titulo_article\": \"titulo\"\n        },\n        {\n            \"titulo_article\": \"titulo\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - filtro de un solo valor",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article,id_user_article&equalTo=9&linkTo=id_user_article",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,id_user_article",
+							"description": "selección de columnas"
+						},
+						{
+							"key": "equalTo",
+							"value": "9",
+							"description": "Valor a comprarar, cada valor separar por coma así que no usarlo para valores con comas"
+						},
+						{
+							"key": "linkTo",
+							"value": "id_user_article",
+							"description": "Filtros, internamente en el SQL usa = y si es más de uno usa AND"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - filtro de un solo valor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article&equalTo=9&linkTo=id_user_article",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "titulo_article,id_user_article"
+								},
+								{
+									"key": "equalTo",
+									"value": "9",
+									"description": "Valor a comprarar, cada valor separar por coma así que no usarlo para valores con comas"
+								},
+								{
+									"key": "linkTo",
+									"value": "id_user_article",
+									"description": "Filtros, internamente en el SQL usa = y si es más de uno usa AND"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:44:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "652"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 6,\n    \"result\": [\n        {\n            \"titulo_article\": \"Art\\u00edculo de prueba 1\",\n            \"id_user_article\": \"9\"\n        },\n        {\n            \"titulo_article\": \"test\",\n            \"id_user_article\": \"9\"\n        },\n        {\n            \"titulo_article\": \"titulo\",\n            \"id_user_article\": \"9\"\n        },\n        {\n            \"titulo_article\": \"titulo\",\n            \"id_user_article\": \"9\"\n        },\n        {\n            \"titulo_article\": \"titulo\",\n            \"id_user_article\": \"9\"\n        },\n        {\n            \"titulo_article\": \"titulo\",\n            \"id_user_article\": \"9\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Seleccionar con filtro por varios valores",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,id_user_article",
+							"description": "Selección de columnas"
+						},
+						{
+							"key": "linkTo",
+							"value": "titulo_article,id_user_article",
+							"description": "Columnas a comprarar"
+						},
+						{
+							"key": "equalTo",
+							"value": "test,9",
+							"description": "Uno es para comparar con una columna y luego el otro con la otra"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Seleccionar con filtro por varios valores",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "titulo_article,id_user_article",
+									"description": "Selección de columnas"
+								},
+								{
+									"key": "linkTo",
+									"value": "titulo_article,id_user_article",
+									"description": "Columnas a comprarar"
+								},
+								{
+									"key": "equalTo",
+									"value": "test,9",
+									"description": "Uno es para comparar con una columna y luego el otro con la otra"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:45:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 1,\n    \"result\": [\n        {\n            \"titulo_article\": \"test\",\n            \"id_user_article\": \"9\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Ordenar datos por filtros",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=id_article,titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9&orderBy=id_article&orderMode=DESC",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_article,titulo_article,id_user_article",
+							"description": "seleccion de columnas"
+						},
+						{
+							"key": "linkTo",
+							"value": "titulo_article,id_user_article",
+							"description": "columnas a filtar"
+						},
+						{
+							"key": "equalTo",
+							"value": "test,9",
+							"description": "valores a filtrar, cada valor corresponde a una columna"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_article",
+							"description": "columna por la que se ordenan los resultados"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"description": "Modo de ordenación DESC / ASC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Ordenar datos por filtros",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=id_article,titulo_article,id_user_article&linkTo=titulo_article,id_user_article&equalTo=test,9&orderBy=id_article&orderMode=DESC",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "id_article,titulo_article,id_user_article"
+								},
+								{
+									"key": "linkTo",
+									"value": "titulo_article,id_user_article"
+								},
+								{
+									"key": "equalTo",
+									"value": "test,9"
+								},
+								{
+									"key": "orderBy",
+									"value": "id_article"
+								},
+								{
+									"key": "orderMode",
+									"value": "DESC",
+									"description": "Modo de ordenación DESC / ASC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:43:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 1,\n    \"result\": [\n        {\n            \"id_article\": \"4\",\n            \"titulo_article\": \"test\",\n            \"id_user_article\": \"9\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Limitar datos sin filtro",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article,id_user_article,id_category_article&startAt=0&endAt=3",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,id_user_article,id_category_article",
+							"description": "selección de columnas"
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"description": "Resultado desde el comienzo de la paginación"
+						},
+						{
+							"key": "endAt",
+							"value": "3",
+							"description": "El resultado hasta donde llega la limitación"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Limitar datos sin filtro",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?select=titulo_article,id_user_article,id_category_article&startAt=0&endAt=3",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "titulo_article,id_user_article,id_category_article"
+								},
+								{
+									"key": "startAt",
+									"value": "0"
+								},
+								{
+									"key": "endAt",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:46:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "484"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 3,\n    \"result\": [\n        {\n            \"titulo_article\": \"Art\\u00edculo de prueba 1\",\n            \"id_user_article\": \"9\",\n            \"id_category_article\": \"1\"\n        },\n        {\n            \"titulo_article\": \"test\",\n            \"id_user_article\": \"9\",\n            \"id_category_article\": \"1\"\n        },\n        {\n            \"titulo_article\": \"titulo\",\n            \"id_user_article\": \"9\",\n            \"id_category_article\": \"1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Limitar datos con filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=id_article,id_user_article,id_category_article&startAt=0&endAt=5&linkTo=id_user_article&equalTo=9&orderMode=DESC&orderBy=id_article",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_article,id_user_article,id_category_article",
+							"description": "Selección de columnas"
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"description": "Registro de comienzo"
+						},
+						{
+							"key": "endAt",
+							"value": "5",
+							"description": "Hasta ese retgistro"
+						},
+						{
+							"key": "linkTo",
+							"value": "id_user_article",
+							"description": "columna a filtrar, es posible más de uno separados por coma"
+						},
+						{
+							"key": "equalTo",
+							"value": "9",
+							"description": "valor a filtar, es posible más de uno separados por coma"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"description": "Orden DESC / ASC"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_article",
+							"description": "Campos los los que ordenar, es posible poner más de uno separados por coma"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category&startAt=0&endAt=1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article",
+							"description": "selección de columnas"
+						},
+						{
+							"key": "rel",
+							"value": "articles,users,categories",
+							"description": "relación de tablas"
+						},
+						{
+							"key": "type",
+							"value": "article,user,category",
+							"description": "los prefijos de las tablas relacionadas"
+						},
+						{
+							"key": "linkTo",
+							"value": "email_user",
+							"description": "columna a filtrar",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "juan",
+							"description": "valor de la columna a filtrar",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"description": "Indica el registro por el cual va a empezar a mostrar"
+						},
+						{
+							"key": "endAt",
+							"value": "1",
+							"description": "Se limitan los resultados hasta ese registro"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category&linkTo=email_user&equalTo=juan&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTMxNDY2NDgsImV4cCI6MTY1MzIzMzA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.3e-VwUtGABk6euOWAh-PL6N43I1YvEiFrF7SnjmkY1U",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"relations",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article"
+								},
+								{
+									"key": "rel",
+									"value": "articles,users,categories"
+								},
+								{
+									"key": "type",
+									"value": "article,user,category"
+								},
+								{
+									"key": "linkTo",
+									"value": "email_user"
+								},
+								{
+									"key": "equalTo",
+									"value": "juan"
+								},
+								{
+									"key": "startAt",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "endAt",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTMxNDY2NDgsImV4cCI6MTY1MzIzMzA0OCwiZGF0YSI6eyJpZCI6IjE0IiwiZW1haWwiOiJqdWFuNzdAIn19.3e-VwUtGABk6euOWAh-PL6N43I1YvEiFrF7SnjmkY1U"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 21 May 2022 17:17:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1183"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 2,\n    \"result\": [\n        {\n            \"id_article\": \"3\",\n            \"titulo_article\": \"test\",\n            \"imagen_article\": null,\n            \"contenido_article\": \"test\",\n            \"meta_article\": null,\n            \"id_user\": \"9\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan T\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_category\": \"1\",\n            \"name_category\": \"\",\n            \"status_article\": \"0\",\n            \"date_created_article\": \"2022-05-05 12:25:33\",\n            \"date_updated_article\": \"2022-05-05 12:25:33\"\n        },\n        {\n            \"id_article\": \"4\",\n            \"titulo_article\": \"test\",\n            \"imagen_article\": null,\n            \"contenido_article\": \"test\",\n            \"meta_article\": null,\n            \"id_user\": \"9\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan T\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_category\": \"1\",\n            \"name_category\": \"\",\n            \"status_article\": \"0\",\n            \"date_created_article\": \"2022-05-05 12:25:59\",\n            \"date_updated_article\": \"2022-05-05 12:25:59\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET - Relaciones entre tablas (posibilidad de filtrados)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category&startAt=0&endAt=1",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"relations",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article",
+									"description": "selección de columnas"
+								},
+								{
+									"key": "rel",
+									"value": "articles,users,categories",
+									"description": "relación de tablas"
+								},
+								{
+									"key": "type",
+									"value": "article,user,category",
+									"description": "los prefijos de las tablas relacionadas"
+								},
+								{
+									"key": "linkTo",
+									"value": "email_user",
+									"description": "columna a filtrar",
+									"disabled": true
+								},
+								{
+									"key": "equalTo",
+									"value": "juan",
+									"description": "valor de la columna a filtrar",
+									"disabled": true
+								},
+								{
+									"key": "startAt",
+									"value": "0",
+									"description": "Indica el registro por el cual va a empezar a mostrar"
+								},
+								{
+									"key": "endAt",
+									"value": "1",
+									"description": "Se limitan los resultados hasta ese registro"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 15:04:08 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6016"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"total\": 1,\n    \"result\": [\n        {\n            \"id_article\": \"3\",\n            \"titulo_article\": \"Art\\u00edculo de prueba 1\",\n            \"imagen_article\": \"https://as1.ftcdn.net/v2/jpg/04/89/73/56/1000_F_489735696_C02RJ7Qw3xPm16j31QmdDKrCxPvwEU73.jpg\",\n            \"contenido_article\": \"<p>\\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\\n                    </p>\\n                    <p>\\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\\n                    </p>\\n                    <p>  \\n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \\n                    </p>\\n\\n                    <p>\\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\\n                    </p>\\n                    <p>\\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\\n                    </p>\\n                    <p>  \\n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \\n                    </p>\\n\\n                    <p>\\n                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.\\n                    </p>\\n                    <p>\\n                        Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.\\n                    </p>\\n                    <p>  \\n                        Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. \\n                    </p>\\n\",\n            \"meta_article\": null,\n            \"id_user\": \"9\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_category\": \"1\",\n            \"name_category\": \"\",\n            \"status_article\": \"0\",\n            \"date_created_article\": \"2022-05-05 12:25:33\",\n            \"date_updated_article\": \"2022-05-30 12:17:27\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Busqueda sin filtros ni relaciones",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article,id_user_article&linkTo=id_user_article&search=9",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,id_user_article",
+							"description": "seleccion de columnas"
+						},
+						{
+							"key": "linkTo",
+							"value": "id_user_article",
+							"description": "columna a filtrar"
+						},
+						{
+							"key": "search",
+							"value": "9",
+							"description": "valor por el cual se filtra la columna"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda sin relaciones y con filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?linkTo=titulo_article,id_article&search=test,3",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,id_user_article",
+							"description": "seleccion de columnas",
+							"disabled": true
+						},
+						{
+							"key": "linkTo",
+							"value": "titulo_article,id_article",
+							"description": "La primera columna busca y la segunda filtra"
+						},
+						{
+							"key": "search",
+							"value": "test,3",
+							"description": "El primer valor es de busqueda y el segundo filtra"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Busqueda con relaciones",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/relations/articles?rel=articles,users,categories&type=article,user,category&select=titulo_article,name_user,name_category&linkTo=email_user,titulo_article&search=juan,test",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "articles,users,categories",
+							"description": "Relaciones de tablas en la consulta"
+						},
+						{
+							"key": "type",
+							"value": "article,user,category",
+							"description": "Prefijo de las tablas, necesario para las relaciones"
+						},
+						{
+							"key": "select",
+							"value": "titulo_article,name_user,name_category",
+							"description": "Columnas seleccionadas"
+						},
+						{
+							"key": "linkTo",
+							"value": "email_user,titulo_article",
+							"description": "La primera columna es de busqueda y la segunda de filtrado"
+						},
+						{
+							"key": "search",
+							"value": "juan,test",
+							"description": "El primer valor es de busqueda y el segundo de filtrado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos con filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?select=titulo_article,date_created_article,date_updated_article&between1=2022-05-01 00:00:00&between2=2022-05-06 00:00:00&linkTo=date_created_article&filterTo=id_article&inTo=3,4",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,date_created_article,date_updated_article",
+							"description": "Columnas a mostrar"
+						},
+						{
+							"key": "between1",
+							"value": "2022-05-01 00:00:00",
+							"description": "valor1 del rango"
+						},
+						{
+							"key": "between2",
+							"value": "2022-05-06 00:00:00",
+							"description": "valor2 del rango"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_article",
+							"description": "Con la columna con la que se enlaza"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_article",
+							"description": "Filtrado mediante la sentencia IN, sirve para comarar multiples valores"
+						},
+						{
+							"key": "inTo",
+							"value": "3,4",
+							"description": "El valor filtrado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos entre relaciones con filtros",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/relations/articles?select=titulo_article,name_user,date_created_article,date_updated_article&between1=2022-05-01 00:00:00&between2=2022-05-06 00:00:00&linkTo=name_user&equalTo=Juan&filterTo=id_user&inTo=3,9&rel=articles,users,categories&type=article,user,category",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"relations",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "titulo_article,name_user,date_created_article,date_updated_article",
+							"description": "Selección de columnas"
+						},
+						{
+							"key": "between1",
+							"value": "2022-05-01 00:00:00",
+							"description": "valor1 del rango"
+						},
+						{
+							"key": "between2",
+							"value": "2022-05-06 00:00:00",
+							"description": "valor2 del rango"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_user",
+							"description": "Con la columna con la que se enlaza"
+						},
+						{
+							"key": "equalTo",
+							"value": "Juan",
+							"description": "Valor a filtrar"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_user",
+							"description": "columna a filtrar"
+						},
+						{
+							"key": "inTo",
+							"value": "3,9",
+							"description": "Valores a filtrar en base a una unica columna"
+						},
+						{
+							"key": "rel",
+							"value": "articles,users,categories",
+							"description": "Tablas a relacionar"
+						},
+						{
+							"key": "type",
+							"value": "article,user,category",
+							"description": "Los prefijos de las tablas a relacionar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Registro de usuario",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_user",
+							"value": "juan77",
+							"description": "email",
+							"type": "text"
+						},
+						{
+							"key": "name_user",
+							"value": "Juan",
+							"description": "nombre",
+							"type": "default"
+						},
+						{
+							"key": "lastname_user",
+							"value": "Molina",
+							"description": "apellidos",
+							"type": "default"
+						},
+						{
+							"key": "id_usertype_user",
+							"value": "1",
+							"description": "tipo de usuario",
+							"type": "default"
+						},
+						{
+							"key": "password_user",
+							"value": "1234",
+							"description": "Contraseña(De no existir parámetro, el usuario se registra desde servicio externo)",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/users?register=true&suffix=user",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true",
+							"description": "Se usa para indicar que se trata de registrar un usuario nuevo"
+						},
+						{
+							"key": "suffix",
+							"value": "user",
+							"description": "Sufijo que uitilizan las columnas de la tabla que contenga usuarios"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Login de usuario",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let response = pm.response.json().result[0].token_user,\r",
+							"    savedData = response;\r",
+							"\r",
+							"pm.collectionVariables.set('token', savedData);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_user",
+							"value": "juan",
+							"description": "columna email de la tabla users",
+							"type": "text"
+						},
+						{
+							"key": "name_user",
+							"value": "Juan",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "lastname_user",
+							"value": "Molina",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "id_usertype_user",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password_user",
+							"value": "1234",
+							"description": "Columna password de la tabla users",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/users?login=true&suffix=user",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true",
+							"description": "Indica que es un login"
+						},
+						{
+							"key": "suffix",
+							"value": "user",
+							"description": "el sufijo que utiliza las columnas dentro de la tabla"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST - Login de usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email_user",
+									"value": "juan",
+									"description": "columna email de la tabla users",
+									"type": "text"
+								},
+								{
+									"key": "name_user",
+									"value": "Juan",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "lastname_user",
+									"value": "Molina",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "id_usertype_user",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password_user",
+									"value": "1234",
+									"description": "Columna password de la tabla users",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?login=true&suffix=user",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"users"
+							],
+							"query": [
+								{
+									"key": "login",
+									"value": "true",
+									"description": "Indica que es un login"
+								},
+								{
+									"key": "suffix",
+									"value": "user",
+									"description": "el sufijo que utiliza las columnas dentro de la tabla"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:49:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "654"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"method\": \"POST\",\n    \"result\": [\n        {\n            \"id_user\": \"9\",\n            \"email_user\": \"juan\",\n            \"foto_user\": null,\n            \"name_user\": \"Juan\",\n            \"lastname_user\": \"Molina G\\u00f3mez\",\n            \"id_usertype_user\": \"1\",\n            \"token_user\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTM5MTEzODMsImV4cCI6MTY1Mzk5Nzc4MywiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.HR3Qk2KLlr7Nb8DHcL1fkRWSKXtzXNsLE38J0iRdTVE\",\n            \"token_exp_user\": 1653997783,\n            \"date_created_user\": \"2022-05-05 12:21:54\",\n            \"date_updated_user\": \"2022-05-30 13:39:31\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "POST - Crear articulo",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_user_article",
+							"value": "9",
+							"description": "En body van las tablas con sus respectivos valores",
+							"type": "text"
+						},
+						{
+							"key": "titulo_article",
+							"value": "titulo",
+							"type": "text"
+						},
+						{
+							"key": "contenido_article",
+							"value": "lorem ipsum, hola contenido",
+							"type": "text"
+						},
+						{
+							"key": "id_category_article",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status_article",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/articles?token={{token}}&table=users&suffix=user",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "token de usuario"
+						},
+						{
+							"key": "table",
+							"value": "users",
+							"description": "tabla"
+						},
+						{
+							"key": "suffix",
+							"value": "user",
+							"description": "sufijo de tabla"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST - Crear articulo - Exitosamente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_user_article",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "titulo_article",
+									"value": "titulo",
+									"type": "text"
+								},
+								{
+									"key": "imagen_article",
+									"value": "imagen",
+									"type": "text"
+								},
+								{
+									"key": "contenido_article",
+									"value": "lorem ipsum, hola contenido",
+									"type": "text"
+								},
+								{
+									"key": "id_category_article",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status_article",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/articles?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTM3NjM3OTUsImV4cCI6MTY1Mzg1MDE5NSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.UdlA6BnP0bAFGFJM6JZr9EvTT-nNMybKPFEXU18Jfx4",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTM3NjM3OTUsImV4cCI6MTY1Mzg1MDE5NSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.UdlA6BnP0bAFGFJM6JZr9EvTT-nNMybKPFEXU18Jfx4"
+								},
+								{
+									"key": "table",
+									"value": "users",
+									"disabled": true
+								},
+								{
+									"key": "suffix",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "framejs",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "Authorization",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 28 May 2022 19:40:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"method\": \"POST\",\n    \"result\": {\n        \"lastId\": \"8\",\n        \"comment\": \"The process was successful\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - En parte publica del API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Crear registros",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name_category",
+							"value": "prueba12345678",
+							"description": "En body van los valores a añadir",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/categories?token={{token}}",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "Token de usuarios"
+						},
+						{
+							"key": "table",
+							"value": "categories",
+							"description": "tabla identificativa",
+							"disabled": true
+						},
+						{
+							"key": "suffix",
+							"value": "category",
+							"description": "prefijo de columna",
+							"disabled": true
+						},
+						{
+							"key": "except",
+							"value": "",
+							"description": "Activa la excepción de usuario logueado, usa un token en concreto",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "{{token_except}}",
+							"description": "Token de excepción",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "POST - Crear registros",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name_category",
+									"value": "prueba12345678",
+									"description": "En body van los valores a añadir",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/categories?token={{token}}",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"description": "Token de usuarios"
+								},
+								{
+									"key": "table",
+									"value": "categories",
+									"description": "tabla identificativa",
+									"disabled": true
+								},
+								{
+									"key": "suffix",
+									"value": "category",
+									"description": "prefijo de columna",
+									"disabled": true
+								},
+								{
+									"key": "except",
+									"value": "",
+									"description": "Activa la excepción de usuario logueado, usa un token en concreto",
+									"disabled": true
+								},
+								{
+									"key": "token",
+									"value": "{{token_except}}",
+									"description": "Token de excepción",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:02:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "138"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"method\": \"POST\",\n    \"result\": {\n        \"lastId\": \"27\",\n        \"comment\": \"The process was successful\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT - Actualizar registros",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name_user",
+							"value": "Juan",
+							"description": "En body van las columnas afectadas al cambio con sus respectivos valores",
+							"type": "text"
+						},
+						{
+							"key": "lastname_user",
+							"value": "Molina Gómez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/users?id=9&nameId=id_user&token={{token}}",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9",
+							"description": "Identificativo del valor por el cual actulizar"
+						},
+						{
+							"key": "nameId",
+							"value": "id_user",
+							"description": "Columna que se identifica como Id"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT - Actualizar registros - Usuario no autorizado",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name_user",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "lastname_user",
+									"value": "Molina Gómez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?id=9&nameId=id_user&token",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								},
+								{
+									"key": "nameId",
+									"value": "id_user"
+								},
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:35:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"result\": \"Error: The user is not authorized\"\n}"
+				},
+				{
+					"name": "PUT - Actualizar registros - No estás autorizado (ausencia de Api Key)",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name_user",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "lastname_user",
+									"value": "Molina Gómez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?id=9&nameId=id_user&token",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								},
+								{
+									"key": "nameId",
+									"value": "id_user"
+								},
+								{
+									"key": "token",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:35:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"result\": \"You are not authorized to make this request\"\n}"
+				},
+				{
+					"name": "PUT - Actualizar registros - Exitosamente",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name_user",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "lastname_user",
+									"value": "Molina Gómez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw/users?id=9&nameId=id_user&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTM5MDM5MTksImV4cCI6MTY1Mzk5MDMxOSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.PvtsdVvSKtC8P8AngfoWVy-oh6Y6Mrn2NRzC2Ra-x04",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"proyectoFinal_blog",
+								"PhpApiRestBlogProyectoDaw",
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								},
+								{
+									"key": "nameId",
+									"value": "id_user"
+								},
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTM5MDM5MTksImV4cCI6MTY1Mzk5MDMxOSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW4ifX0.PvtsdVvSKtC8P8AngfoWVy-oh6Y6Mrn2NRzC2Ra-x04"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 30 May 2022 11:38:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"result\": {\n        \"comment\": \"The process was successful\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE - Eliminar registro",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/articles?id=8&nameId=id_article&token={{token}}",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8",
+							"description": "Valor por el cual se filtra para el borrado de registro"
+						},
+						{
+							"key": "nameId",
+							"value": "id_article",
+							"description": "Es el nombre de la columna que utiliza el identificativo a borrar"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "token que me autoriza como usuario"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE - Eliminar registro - Not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/articles?id=9&nameId=id_article&token={{token}}",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9",
+									"description": "Valor por el cual se filtra para el borrado de registro"
+								},
+								{
+									"key": "nameId",
+									"value": "id_article",
+									"description": "Es el nombre de la columna que utiliza el identificativo a borrar"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"description": "token que me autoriza como usuario"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 14:57:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 404,\n    \"result\": \"Not Found\",\n    \"method\": \"delete\"\n}"
+				},
+				{
+					"name": "DELETE - Eliminar registro - Ok",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/articles?id=8&nameId=id_article&token={{token}}",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8",
+									"description": "Valor por el cual se filtra para el borrado de registro"
+								},
+								{
+									"key": "nameId",
+									"value": "id_article",
+									"description": "Es el nombre de la columna que utiliza el identificativo a borrar"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"description": "token que me autoriza como usuario"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 14:58:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"result\": {\n        \"comment\": \"The process was successful\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "http://localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "token_except",
+			"value": "no",
+			"type": "string"
+		}
+	]
+}

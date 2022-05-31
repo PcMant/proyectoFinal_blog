@@ -156,7 +156,7 @@ if(!empty($array_POST)){
 
 			$json = array(
 			 	'status' => 400,
-			 	'result' => "Error: Authorization required .I."
+			 	'result' => "Error: Authorization required"
 			);
 
 			echo json_encode($json, http_response_code($json["status"]));
