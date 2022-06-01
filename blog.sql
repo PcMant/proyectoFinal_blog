@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 31-05-2022 a las 17:30:58
+-- Tiempo de generación: 01-06-2022 a las 00:46:07
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.4.23
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `configsblog` (
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `email_user` varchar(45) NOT NULL,
+  `email_user` varchar(255) NOT NULL,
   `foto_user` varchar(255) DEFAULT NULL,
   `name_user` varchar(45) NOT NULL,
   `lastname_user` varchar(145) NOT NULL,
@@ -126,14 +126,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `email_user_UNIQUE` (`email_user`),
   KEY `tipo` (`id_usertype_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id_user`, `email_user`, `foto_user`, `name_user`, `lastname_user`, `id_usertype_user`, `password_user`, `token_user`, `token_exp_user`, `date_created_user`, `date_updated_user`) VALUES
-(9, 'juan@pcmant.com', NULL, 'Juan', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQwMTc5MjcsImV4cCI6MTY1NDEwNDMyNywiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW5AcGNtYW50LmNvbSJ9fQ.o1NjDzvxeYfcavdV77GbYGF5dfSJx1MwQIFXSm21zXU', '1654104327', '2022-05-05 10:21:54', '2022-05-31 17:25:27');
+(9, 'juan@pcmant.com', NULL, 'Juan', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQwMTc5MjcsImV4cCI6MTY1NDEwNDMyNywiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW5AcGNtYW50LmNvbSJ9fQ.o1NjDzvxeYfcavdV77GbYGF5dfSJx1MwQIFXSm21zXU', '1654104327', '2022-05-05 10:21:54', '2022-05-31 17:25:27'),
+(15, 'demo@pcmant.com', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', NULL, NULL, '2022-05-31 20:41:43', '2022-05-31 20:41:43');
 
 -- --------------------------------------------------------
 

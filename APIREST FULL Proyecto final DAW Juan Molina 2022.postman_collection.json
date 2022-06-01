@@ -1338,7 +1338,7 @@
 					"urlencoded": [
 						{
 							"key": "email_user",
-							"value": "juan77",
+							"value": "demo@pcmant.com",
 							"description": "email",
 							"type": "text"
 						},
@@ -1390,7 +1390,122 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "POST - Registro de usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email_user",
+									"value": "demo@pcmant.com",
+									"description": "email",
+									"type": "text"
+								},
+								{
+									"key": "name_user",
+									"value": "Juan",
+									"description": "nombre",
+									"type": "default"
+								},
+								{
+									"key": "lastname_user",
+									"value": "Molina",
+									"description": "apellidos",
+									"type": "default"
+								},
+								{
+									"key": "id_usertype_user",
+									"value": "1",
+									"description": "tipo de usuario",
+									"type": "default"
+								},
+								{
+									"key": "password_user",
+									"value": "1234",
+									"description": "Contraseña(De no existir parámetro, el usuario se registra desde servicio externo)",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/users?register=true&suffix=user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "register",
+									"value": "true",
+									"description": "Se usa para indicar que se trata de registrar un usuario nuevo"
+								},
+								{
+									"key": "suffix",
+									"value": "user",
+									"description": "Sufijo que uitilizan las columnas de la tabla que contenga usuarios"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 20:41:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Length",
+							"value": "138"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"method\": \"POST\",\n    \"result\": {\n        \"lastId\": \"15\",\n        \"comment\": \"The process was successful\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "POST - Login de usuario",
