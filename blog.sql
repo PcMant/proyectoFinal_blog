@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 01-06-2022 a las 00:46:07
+-- Tiempo de generación: 01-06-2022 a las 11:28:56
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.4.23
 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `date_updated_category` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_category`),
   UNIQUE KEY `nombre_categoria` (`name_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `categories`
