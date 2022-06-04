@@ -6,7 +6,7 @@ require_once "get.model.php";
 class DeleteModel{
 
 	/*=============================================
-	Peticion Put para eliminar datos de forma dinámica
+	Peticion DELETE para eliminar datos de forma dinámica
 	=============================================*/
 
 	static public function deleteData($table, $id, $nameId){

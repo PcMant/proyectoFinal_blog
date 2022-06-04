@@ -23,7 +23,7 @@ class PostController{
     }
 
     /*==================================================
-    Paticion POST para registrar usuarios
+    Peticion POST para registrar usuarios
     ==================================================*/
     static public function postRegister($table, $data, $suffix){
 
