@@ -158,7 +158,7 @@ class Connection
     }
 
     /*=============================================
-    Validamos que el token no haya expirado
+    Api Key de la parte privada de la API
     =============================================*/
 
     public static function apiKey(){
@@ -166,7 +166,7 @@ class Connection
     }
 
     /*=============================================
-	Acceso público
+	Acceso público a la API
 	=============================================*/
 	static public function publicAccess(){
 
