@@ -42,6 +42,9 @@ if (((isset($_GET['framejs']) && $_SERVER['REQUEST_METHOD'] == 'PUT') || $_SERVE
 Cuando no se hace ninguna petición a la API
 ============================================*/
 
+/*Aquí se indica a partir de que endpoint detectar parámetros, siendo 1 el raiz
+Este es la respuesta que se recibe si se envia una petición sin parámetros, un 404
+*/
 if(count($routesArray) == 2){
 
     $json = array(
@@ -57,7 +60,10 @@ if(count($routesArray) == 2){
 /*========================================
 Cuando si se tiene una petición a la API
 ========================================*/
-
+/*
+Aquí se determina a partir de que enpoint de la url se aceptan peticiones.
+Siendo el valor 1 la raiz
+ */
 if(count($routesArray) > 2 && isset($_SERVER["REQUEST_METHOD"])){
 
     $table = explode('?',$routesArray[3])[0];

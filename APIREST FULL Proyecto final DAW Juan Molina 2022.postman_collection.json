@@ -2202,6 +2202,12 @@
 							"key": "lastname_user",
 							"value": "Molina Gómez",
 							"type": "text"
+						},
+						{
+							"key": "password_user",
+							"value": "",
+							"type": "text",
+							"disabled": true
 						}
 					]
 				},
