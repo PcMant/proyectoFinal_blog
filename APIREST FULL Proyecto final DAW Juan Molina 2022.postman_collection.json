@@ -2193,6 +2193,12 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
+							"key": "email_user",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
 							"key": "name_user",
 							"value": "Juan",
 							"description": "En body van las columnas afectadas al cambio con sus respectivos valores",
