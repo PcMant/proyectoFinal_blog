@@ -13,13 +13,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -134,13 +134,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -269,13 +269,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -405,13 +405,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -557,13 +557,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -686,6 +686,21 @@
 		{
 			"name": "GET - Limitar datos con filtro",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{Authorization}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -747,25 +762,19 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
 					"raw": "{{endpoint}}/relations/articles?select=id_article,titulo_article,imagen_article,contenido_article,meta_article,id_user,foto_user,name_user,lastname_user,id_category,name_category,status_article,date_created_article,date_updated_article&rel=articles,users,categories&type=article,user,category&startAt=0&endAt=1",
 					"host": [
@@ -1047,13 +1056,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -1092,6 +1101,21 @@
 		{
 			"name": "GET - Busqueda sin relaciones y con filtros",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{Authorization}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -1131,13 +1155,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -1187,6 +1211,21 @@
 		{
 			"name": "GET - Rangos con filtros",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{Authorization}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -1240,13 +1279,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -1320,13 +1359,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -1526,7 +1565,8 @@
 							"let response = pm.response.json().result[0].token_user,\r",
 							"    savedData = response;\r",
 							"\r",
-							"pm.collectionVariables.set('token', savedData);"
+							"pm.collectionVariables.set('token', savedData);\r",
+							"pm.environment.set('token', savedData);"
 						],
 						"type": "text/javascript"
 					}
@@ -1537,32 +1577,25 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
 							"key": "email_user",
-							"value": "juan",
+							"value": "juan@pcmant.com",
 							"description": "columna email de la tabla users",
 							"type": "text"
 						},
@@ -1746,26 +1779,19 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
 				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
@@ -1992,13 +2018,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -2176,13 +2202,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -2539,13 +2565,13 @@
 					"type": "apikey",
 					"apikey": [
 						{
-							"key": "key",
-							"value": "Authorization",
+							"key": "value",
+							"value": "{{Authorization}}",
 							"type": "string"
 						},
 						{
-							"key": "value",
-							"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
+							"key": "key",
+							"value": "Authorization",
 							"type": "string"
 						}
 					]
@@ -2775,6 +2801,11 @@
 		{
 			"key": "endpoint",
 			"value": "http://localhost/proyectoFinal_blog/PhpApiRestBlogProyectoDaw",
+			"type": "string"
+		},
+		{
+			"key": "Authorization",
+			"value": "AtWV3mYpVNrQvKdD4gWvjbF2imGLQh",
 			"type": "string"
 		},
 		{
