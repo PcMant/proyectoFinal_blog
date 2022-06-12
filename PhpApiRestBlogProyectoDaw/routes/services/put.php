@@ -57,7 +57,7 @@ if(isset($_GET["id"]) && isset($_GET["nameId"])){
 		Peticion PUT para usuarios no autorizados
 		=============================================*/
 
-		if($_GET["token"] == "no" && isset($_GET["except"])){
+		if($_GET["token"] == ");-Mr4TLR;&wbN.cw7qMW}QfRi[9b6q)BT+yymkPt.8a/NA!(k" && isset($_GET["except"])){
 
 			/*=============================================
 			Validar la tabla y las columnas
