@@ -2,4 +2,4 @@
 
 Demo: [https://angularblogproyectodaw.vercel.app/](https://angularblogproyectodaw.vercel.app/)
 
-Repositorio Frontend con Angular: [https://github.com/PcMant/angularBlogProyectoDaw](https://github.com/PcMant/angularBlogProyectoDaw)
+Repositorio Frontend con Angular de este proyecto: [https://github.com/PcMant/angularBlogProyectoDaw](https://github.com/PcMant/angularBlogProyectoDaw)
