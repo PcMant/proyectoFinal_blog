@@ -21,4 +21,4 @@ Para ponerlo en local hay que cumplir con los requisitos mencionados anteriormen
 Para más información:
 - Importar el fichero "APIREST FULL Proyecto final DAW Juan Molina 2022.postman_collection.json" a [Postman](https://www.postman.com/) para conocer más detalles del uso de la API.
 - Ver los comentarios de código tanto en el backend como en el frontend.
-- [Consultar la documentación del proyecto]().
+- [Consultar la documentación del proyecto](https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez).
