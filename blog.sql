@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 12-06-2022 a las 02:07:07
+-- Tiempo de generación: 20-06-2022 a las 23:05:02
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.4.23
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   PRIMARY KEY (`id_article`),
   KEY `fk_usuarios_articulos` (`id_user_article`),
   KEY `fk_categorias_articulos` (`id_category_article`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `articles`
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `date_updated_category` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_category`),
   UNIQUE KEY `nombre_categoria` (`name_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `categories`
@@ -131,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id_user`, `email_user`, `foto_user`, `name_user`, `lastname_user`, `id_usertype_user`, `password_user`, `token_user`, `token_exp_user`, `date_created_user`, `date_updated_user`) VALUES
-(9, 'juan@pcmant.com', NULL, 'Juan', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ5OTg5NjgsImV4cCI6MTY1NTA4NTM2OCwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW5AcGNtYW50LmNvbSJ9fQ.pb35DawKUguCBqLrV9XkhofuEY92KtNtwTZjdzisM1w', '1655085368', '2022-05-05 10:21:54', '2022-06-12 01:56:08'),
-(15, 'demo@pcmant.com', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTQ1NDA3NjUsImV4cCI6MTY1NDYyNzE2NSwiZGF0YSI6eyJpZCI6IjE1IiwiZW1haWwiOiJkZW1vQHBjbWFudC5jb20ifX0.mhUexCm7OzKDc7nuga2Gb2Jb75__Huyl5q1-5L454NU', '1654627165', '2022-05-31 20:41:43', '2022-06-06 18:39:25');
+(9, 'juan@pcmant.com', NULL, 'Juan', 'Molina Gómez', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTUxNDIxMzksImV4cCI6MTY1NTIyODUzOSwiZGF0YSI6eyJpZCI6IjkiLCJlbWFpbCI6Imp1YW5AcGNtYW50LmNvbSJ9fQ.yAxV8WyKgw49_3pZu3DptRgskTnfl_1KPqpeyCNj_hY', '1655228539', '2022-05-05 10:21:54', '2022-06-13 17:42:20'),
+(15, 'demo@pcmant.com', NULL, 'Juan', 'Molina', 1, '$2a$07$azybxcags23425sdg23sdeuiZyE5TxUkrcXrZtPfYBFC6APznfwgC', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTUxNDE3MjQsImV4cCI6MTY1NTIyODEyNCwiZGF0YSI6eyJpZCI6IjE1IiwiZW1haWwiOiJkZW1vQHBjbWFudC5jb20ifX0.fVhAVsN1AsegjIJyUZJGTWzcPjfgrKXQ0PGiYTzL6eM', '1655228124', '2022-05-31 20:41:43', '2022-06-13 17:35:24');
 
 -- --------------------------------------------------------
 
