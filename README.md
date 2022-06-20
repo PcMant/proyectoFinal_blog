@@ -4,6 +4,8 @@ Demo: [https://angularblogproyectodaw.vercel.app/](https://angularblogproyectoda
 
 Repositorio Frontend con Angular de este proyecto: [https://github.com/PcMant/angularBlogProyectoDaw](https://github.com/PcMant/angularBlogProyectoDaw)
 
+Documentación del proyecto: [https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez](https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez)
+
 ## Requisitos para ejecutar en local
 Las versiones mostradas a continuación son las utilizadas en el momento del desarrollo y es recomentable que almenos sean dichas versiones en adelante para poder ser ejecutadas.
 ### Requisitos para el backend
