@@ -8,8 +8,6 @@ Documentación del proyecto: [https://archive.org/details/memoriasProyectoFinalD
 
 Documentación de uso de la API: [https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487](https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487)
 
-<a href="https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487" target="_blank">https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487</a>
-
 ## Requisitos para ejecutar en local
 Las versiones mostradas a continuación son las utilizadas en el momento del desarrollo y es recomentable que almenos sean dichas versiones en adelante para poder ser ejecutadas.
 ### Requisitos para el backend
