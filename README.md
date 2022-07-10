@@ -1,10 +1,14 @@
 # Proyecto blog Angular con API RESTFUL PHP y MySQL
 
-Demo: [https://angularblogproyectodaw.vercel.app/](https://angularblogproyectodaw.vercel.app/)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=collection%2Ffork&collection-url=entityId%3D21881487-1e075f82-7749-4229-9710-7756e09fdd26%26entityType%3Dcollection%26workspaceId%3D0ea68775-646c-4fb5-a7c7-eb26f534817c){:target="_blank"}
 
-Repositorio Frontend con Angular de este proyecto: [https://github.com/PcMant/angularBlogProyectoDaw](https://github.com/PcMant/angularBlogProyectoDaw)
+Demo: [https://angularblogproyectodaw.vercel.app/](https://angularblogproyectodaw.vercel.app/){:target="_blank"}
 
-Documentación del proyecto: [https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez](https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez)
+Repositorio Frontend con Angular de este proyecto: [https://github.com/PcMant/angularBlogProyectoDaw](https://github.com/PcMant/angularBlogProyectoDaw){:target="_blank"}
+
+Documentación del proyecto: [https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez](https://archive.org/details/memoriasProyectoFinalDAW_JuanMolinaGomez){:target="_blank"}
+
+Documentación de uso de la API: [https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487](https://www.postman.com/joint-operations-operator-22896922/workspace/public/collection/21881487-1e075f82-7749-4229-9710-7756e09fdd26?action=share&creator=21881487){:target="_blank"}
 
 ## Requisitos para ejecutar en local
 Las versiones mostradas a continuación son las utilizadas en el momento del desarrollo y es recomentable que almenos sean dichas versiones en adelante para poder ser ejecutadas.
